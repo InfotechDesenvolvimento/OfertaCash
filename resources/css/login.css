@@ -1,0 +1,56 @@
+@font-face {
+    font-family: 'FF Sizmo';
+    src: local('FF Sizmo Pro Regular'), local('FF-Sizmo-Pro-Regular'),
+        url('SizmoPro.woff2') format('woff2'),
+        url('SizmoPro.woff') format('woff'),
+        url('SizmoPro.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+.fundo_login {
+    background-image: url('../images/background3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: center;
+    color: #fff;
+    height: 100vh;
+    width: 100%;
+}
+
+.fundo {
+    background-color: rgba(0,0,255, 0.2);
+    height: 100vh;
+    width: 100%;
+}
+
+.form-login {
+    left: 20%;
+    width: 60%;
+    height: 60%;
+    top: 20%;
+    border-radius: 25px;
+    background-color: rgba(255,255,255, 0.2);
+    position: absolute;
+}
+
+input {
+    margin-top: 6%;
+    margin-left: 15%;
+    width: 70%;
+    height: 50px;
+    background-color: transparent;
+    border-bottom: 1px solid #fff;
+    transition: border-width 0.4s linear;
+    text-align: center;
+    font-family: 'FF Sizmo';
+    color: #fff;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+    border-bottom: 5px solid #fff;
+}

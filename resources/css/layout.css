@@ -1,0 +1,237 @@
+@font-face {
+    font-family: 'FF Sizmo';
+    src: local('FF Sizmo Pro Regular'), local('FF-Sizmo-Pro-Regular'),
+        url('SizmoPro.woff2') format('woff2'),
+        url('SizmoPro.woff') format('woff'),
+        url('SizmoPro.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+.nav {
+    width: 100%;
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    background-color: rgb(0,0,0,0.7);
+    height: 120px;
+}
+
+.nav-item {
+    margin-top: 40px;
+    font-family: 'FF Sizmo';
+}
+
+.nav-link:hover {
+    font-weight: bolder;
+    border-bottom: 5px solid #fff;
+}
+
+.nav .nav-item .nav-link {
+    color: #fff;
+    transition: border-width 0.4s linear;
+}
+
+.header {
+    height: 70vh;
+    width: 100%;
+}
+
+#title {
+    height: 80vh;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0,0,255, 0.2);
+}
+
+#sub_title {
+    width: 100%;
+    margin-top: 15%;
+    color: #fff;
+    text-align: center;
+    font-family: 'FF Sizmo';
+}
+
+#sub_title h3 {
+    color: #FFFFFF;
+    font-family: 'FF Sizmo';
+    font-size: 68px;
+    font-weight: 700;
+    line-height: 1.2em;
+}
+
+#sub_title p {
+    color: #000;
+    font-weight: bold;
+}
+
+.cb-slideshow,
+.cb-slideshow:after { 
+    position: absolute;
+    width: 100%;
+    height: 80%;
+    top: 0;
+    left: 0px;
+    z-index: 0; 
+}
+.cb-slideshow:after { 
+    content: '';
+    background: transparent url(/images/pattern.png) repeat top left; 
+}
+
+.cb-slideshow li span { 
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0px;
+    color: transparent;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: none;
+    opacity: 0;
+    z-index: 0;
+    animation: imageAnimation 36s linear infinite 0s; 
+}
+
+.cb-slideshow li div { 
+    z-index: 1000;
+    position: absolute;
+    left: 0px;
+    width: 80%;
+    text-align: center;
+    opacity: 0;
+    color: #fff;
+    animation: titleAnimation 36s linear infinite 0s; 
+}
+.cb-slideshow li div h3 { 
+    font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
+    font-size: 240px;
+    padding: 0;
+    line-height: 200px; 
+}
+
+.cb-slideshow li:nth-child(1) span { 
+    background-image: url(../images/background1.jpg) 
+}
+.cb-slideshow li:nth-child(2) span { 
+    background-image: url(../images/background2.jpg);
+    animation-delay: 6s; 
+}
+.cb-slideshow li:nth-child(3) span { 
+    background-image: url(../images/background3.jpg);
+    animation-delay: 12s; 
+}
+.cb-slideshow li:nth-child(4) span { 
+    background-image: url(../images/background1.jpg);
+    animation-delay: 18s; 
+}
+.cb-slideshow li:nth-child(5) span { 
+    background-image: url(../images/background2.jpg);
+    animation-delay: 24s; 
+}
+.cb-slideshow li:nth-child(6) span { 
+    background-image: url(../images/background3.jpg);
+    animation-delay: 30s; 
+}
+
+.cb-slideshow li:nth-child(2) div { 
+    animation-delay: 6s; 
+}
+.cb-slideshow li:nth-child(3) div { 
+    animation-delay: 12s; 
+}
+.cb-slideshow li:nth-child(4) div { 
+    animation-delay: 18s; 
+}
+.cb-slideshow li:nth-child(5) div { 
+    animation-delay: 24s; 
+}
+.cb-slideshow li:nth-child(6) div { 
+    animation-delay: 30s; 
+}
+
+@keyframes imageAnimation { 
+    0% { opacity: 0; animation-timing-function: ease-in; }
+    8% { opacity: 1; animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 }
+}
+
+@keyframes titleAnimation { 
+    0% { opacity: 0 }
+    8% { opacity: 1 }
+    17% { opacity: 1 }
+    19% { opacity: 0 }
+    100% { opacity: 0 }
+}
+
+.no-cssanimations .cb-slideshow li span{
+	opacity: 1;
+}
+
+@media screen and (max-width: 1140px) { 
+    .cb-slideshow li div h3 { font-size: 140px }
+}
+@media screen and (max-width: 600px) { 
+    .cb-slideshow li div h3 { font-size: 80px }
+}
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0;
+}
+
+.bottom_header {
+    height: 120px;
+}
+
+.navbar-toggle {
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    cursor: pointer; 
+    color: rgba(255,255,255,0.8);
+    font-size: 24px;
+    display: none;
+}
+
+@media screen and (max-width: 1300px) {
+    .nav-item {
+        display: none;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+}
+
+#logo_nav {
+    width: 150px;
+}
+
+#logo_ofertacash {
+    width: 500px;
+}
+
+@media screen and (max-height: 800px) {
+    #sub_title {
+        margin-top: 6%;
+    }
+}
+
+@media screen and (max-height: 621px) {
+    #logo_ofertacash {
+        width: 350px;
+    }
+}
+
+#logo_nav {
+    margin-top: 15px;
+}

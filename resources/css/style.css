@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'FF Sizmo';
+    src: local('FF Sizmo Pro Regular'), local('FF-Sizmo-Pro-Regular'),
+        url('SizmoPro.woff2') format('woff2'),
+        url('SizmoPro.woff') format('woff'),
+        url('SizmoPro.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }

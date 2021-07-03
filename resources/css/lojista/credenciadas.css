@@ -1,0 +1,75 @@
+.filtro_div {
+    width: 94%;
+    margin-left: 3%;
+    border: 1px solid #fff;
+    border-radius: 25px;
+    background-color: rgba(255,255,255, 0.3);
+    font-family: 'FF Sizmo';
+    height: 25vh;
+}
+
+label {
+    font-family: 'FF Sizmo';
+}
+
+select {
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 25px;
+    color: #fff;
+    text-align: center;
+    transition: border-width 0.4s linear;
+    font-family: 'FF Sizmo';
+    width: 100%;
+}
+
+select:focus {
+    color: #000;
+}
+
+.botao_padrao, input {
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 25px;
+    width: 10%;
+    margin-left: 5%;
+    height: 30px;
+    margin-top: 10px;
+    font-family: 'FF Sizmo';
+    transition: border-width 0.4s linear;
+    color: #fff;
+}
+
+.botao_padrao:hover {
+    border: 3px solid #fff;
+}
+
+input:focus, select:focus {
+    border: 3px solid #fff;
+    outline: none;
+}
+
+table {
+    background-color: rgba(255,255,255, 0.3) !important;
+    border-radius: 25px;
+}
+
+tr, td {
+    background-color: transparent !important;
+    color: #fff !important;
+}
+
+.table-responsive {
+    width: 94%;
+    margin-left: 3%;
+    border-radius: 25px;
+    border: 1px solid #fff;
+    font-family: 'FF Sizmo' !important;
+}
+
+.title {
+    width: 100%;
+    height: 75px;
+    text-align: center;
+    color: #fff;
+}

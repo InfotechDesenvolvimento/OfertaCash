@@ -1,0 +1,57 @@
+@font-face {
+    font-family: 'FF Sizmo';
+    src: local('FF Sizmo Pro Regular'), local('FF-Sizmo-Pro-Regular'),
+        url('SizmoPro.woff2') format('woff2'),
+        url('SizmoPro.woff') format('woff'),
+        url('SizmoPro.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+.div_texto {
+    margin-left: 20%;
+    width: 60%;
+    text-align: center;
+    align-items: center;
+    font-family: 'FF Sizmo';
+}
+
+.credenciamento {
+    background-image: url('../images/background1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: center;
+    color: #fff;
+}
+
+.fundo {
+    background-color: rgba(4, 30, 66, 0.9);
+}
+
+.form-div {
+    width: 40%;
+    margin-left: 40%;
+}
+
+.form-div input, select {
+    margin-top: 10px;
+    width: 90%;
+    background-color: transparent;
+    font-family: 'FF Sizmo';
+    height: 50px;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    transition: border-width 0.4s linear;
+}
+
+.form-div select:focus {
+    color: #000;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+    border-bottom: 5px solid #fff;
+}

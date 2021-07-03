@@ -1,0 +1,101 @@
+@font-face {
+  font-family: 'FF Sizmo';
+  src: local('FF Sizmo Pro Regular'), local('FF-Sizmo-Pro-Regular'),
+      url('SizmoPro.woff2') format('woff2'),
+      url('SizmoPro.woff') format('woff'),
+      url('SizmoPro.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+.sidenav {
+    height: 100%;
+    width: 20%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  
+  /* Style the sidenav links and the dropdown button */
+  .sidenav a, .dropdown-btn, label {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    border: none;
+    background: none;
+    width:100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+    font-family: 'FF Sizmo';
+    height: 50px;
+  }
+
+  .sidenav a, .dropdown-btn {  
+    border-bottom: 1px solid #818181;
+    transition: border-width 0.4s linear;
+  }
+  /* On mouse-over */
+  .sidenav a:hover, .dropdown-btn:hover {
+    color: #fff;
+    border-bottom: 3px solid #fff;
+    font-weight: bolder;
+  }
+  
+  /* Main content */
+  .main {
+    margin-left: 200px; /* Same as the width of the sidenav */
+    font-size: 20px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+  }
+  
+  /* Add an active class to the active dropdown button */
+  .active {
+    background-color: #262626;
+    color: white;
+  }
+
+  label {
+    color: #fff;
+    font-size: 12px;
+  }
+  
+  /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+  .dropdown-container {
+    display: none;
+    padding-left: 15px;
+  }
+  
+  /* Optional: Style the caret down icon */
+  .fa-caret-down {
+    float: right;
+    padding-right: 8px;
+  }
+
+  .conteudo {
+    margin-left: 20%;
+    width: 80%;
+    height: 100vh;
+    background-image: url('../images/background1.jpg');
+  }
+
+  #usuario_nome {
+    color: #fff;
+  }
+
+  .selecionado {
+    color: #fff !important;
+    font-weight: bolder !important;
+  }
+
+  .fundo {
+    background-color: rgba(0,0,0, 0.8);
+    width: 100%;
+    height: 100%;
+  }
