@@ -9,49 +9,57 @@
 }
 
 body {
+    background-color: #EDEDED;
     font-family: 'Nunito';
-}
-            
-.nav {
-    width: 100%;
-    z-index: 999;
-    position: absolute;
-    top: 0;
-    background-color: rgb(0,0,0,0.7);
-    height: 120px;
-}
-
-.nav-item {
-    margin-top: 40px;
-    font-family: 'FF Sizmo';
-}
-
-.nav-link:hover {
-    font-weight: bolder;
-    border-bottom: 5px solid #fff;
-}
-
-.nav .nav-item .nav-link {
-    color: #fff;
-    transition: border-width 0.4s linear;
 }
 
 .header {
     height: 70vh;
-    width: 100%;
+}
+
+#cont_head {
+    position: absolute;
+    width: 70%;
+    left: 15%;
+    top: 67%;
+    margin-top: 45px;
+}
+
+#row_header {
+    background-color: rgb(240, 235, 235);
+    z-index: 10;
+}
+
+#row_header .col-sm {
+    height: 200px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    align-items: center;
+    align-content: center;
+}
+
+#row_header .col-sm:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.39);
+    background-color: #fff;
+}
+
+#row_header .col-sm i {
+    font-size: 32px;
+    color: #1a29e2;
 }
 
 #title {
+    top: 0;
     height: 80vh;
     position: absolute;
-    top: 0;
     width: 100%;
     background-color: rgba(0,0,255, 0.2);
 }
 
 #sub_title {
+    height: 100%;
     width: 100%;
-    margin-top: 15%;
+    margin-top: 10%;
     color: #fff;
     text-align: center;
     font-family: 'FF Sizmo';
@@ -70,23 +78,23 @@ body {
     font-weight: bold;
 }
 
-.cb-slideshow,
-.cb-slideshow:after { 
+.cb-slideshow, .cb-slideshow:after { 
     position: absolute;
     width: 100%;
-    height: 80%;
+    height: 100%;
     top: 0;
     left: 0px;
     z-index: 0; 
 }
+
 .cb-slideshow:after { 
     content: '';
-    background: transparent url(/images/pattern.png) repeat top left; 
+    background: transparent url(../images/pattern.png) repeat top left; 
 }
 
 .cb-slideshow li span { 
     width: 100%;
-    height: 100%;
+    height: 80%;
     position: absolute;
     top: 0;
     left: 0px;
@@ -103,12 +111,13 @@ body {
     z-index: 1000;
     position: absolute;
     left: 0px;
-    width: 80%;
+    width: 100%;
     text-align: center;
     opacity: 0;
     color: #fff;
     animation: titleAnimation 36s linear infinite 0s; 
 }
+
 .cb-slideshow li div h3 { 
     font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
     font-size: 240px;
@@ -116,7 +125,7 @@ body {
     line-height: 200px; 
 }
 
-.cb-slideshow li:nth-child(1) span { 
+.cb-slideshow li:nth-child(1) span {
     background-image: url(../images/background1.jpg) 
 }
 .cb-slideshow li:nth-child(2) span { 
@@ -156,6 +165,37 @@ body {
     animation-delay: 30s; 
 }
 
+.nav {
+    width: 100%;
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    background-color: #E7EDEE;
+    height: 120px;
+}
+
+.nav-item {
+    margin-top: 40px;
+    font-family: 'FF Sizmo';
+    text-transform: uppercase;
+    color: #1a29e2;
+}
+
+#logo_nav {
+    margin-top: 15px;
+}
+
+.nav-link:hover {
+    font-weight: bolder;
+    border-bottom: 5px solid #1a29e2;
+    cursor:pointer;
+}
+
+.nav .nav-item .nav-link {
+    color: #507DBC;
+    transition: border-width 0.4s linear;
+}
+
 @keyframes imageAnimation { 
     0% { opacity: 0; animation-timing-function: ease-in; }
     8% { opacity: 1; animation-timing-function: ease-out; }
@@ -173,7 +213,7 @@ body {
 }
 
 .no-cssanimations .cb-slideshow li span{
-	opacity: 1;
+    opacity: 1;
 }
 
 @media screen and (max-width: 1140px) { 
@@ -193,8 +233,134 @@ ul {
     padding-inline-start: 0;
 }
 
-.bottom_header {
-    height: 120px;
+#about_us h2 {
+    margin-top: 100px;
+    color: #041E42;
+    font-family: "Poppins", Sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.2em;
+}
+
+#about_us i {
+    color: #1a29e2;
+}
+
+#img1 {
+    width: 80%;
+    margin-left: 20%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#img_div {
+    position: relative;
+    margin-top: 150px;
+}
+
+#img_div #play {
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    width: 90px;
+    height: 90px;
+    background-color: #1a29e2;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-transition: background-color 1000ms linear;
+    -moz-transition: background-color 1000ms linear;
+    -o-transition: background-color 1000ms linear;
+    -ms-transition: background-color 1000ms linear;
+    transition: background-color 1000ms linear;
+}
+
+#img_div #play:hover {
+    background-color: red;
+}
+
+#img_div i {
+    color: #fff;
+    font-size: 48px;
+    margin-left: 23px;
+    margin-top: 23px;
+}
+
+.services {
+    background-color: #fff;
+    width: 100%;
+}
+
+.services h2 {
+    text-align: center;
+    margin-top: 100px;
+    color: #041E42;
+    font-family: "Poppins", Sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.2em;
+}
+
+.services h3 {
+    font-size: 22px;
+}
+
+.fundo_i i {
+    font-size: 40px;
+    color: #fff;
+    margin-left: 23px;
+    margin-top: 25px;
+}
+
+.fundo_i {
+    height: 90px;
+    width: 90px;
+    background-color: #1a29e2;
+}
+
+.container .row .col-sm h3{
+    margin-left: 20px;
+    margin-top: 25px;
+}
+
+.caixa {
+    margin: 50px;
+}
+
+.power {
+    width: 100%;
+    height: 400px;
+    background-image: url('../images/background1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: center;
+}
+
+.power .fundo {
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(11, 11, 72, 0.8);
+}
+.power .fundo h2{
+    padding-top: 10%;
+    color: #FFFFFF;
+    font-family: "Poppins", Sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.2em;
+    font-weight: bolder;
+}
+
+.power .fundo p {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #FFFFFF;
+    font-family: "Lato", Sans-serif;
+}
+
+.nav .nav-item .nav-link {
+    color: #1a29e2;
 }
 
 .navbar-toggle {
@@ -202,12 +368,12 @@ ul {
     top: 40px;
     right: 20px;
     cursor: pointer; 
-    color: rgba(255,255,255,0.8);
+    color: #1a29e2;
     font-size: 24px;
     display: none;
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 930px) {
     .nav-item {
         display: none;
     }
@@ -222,6 +388,7 @@ ul {
 
 #logo_ofertacash {
     width: 500px;
+    margin-top: 55px;
 }
 
 @media screen and (max-height: 800px) {
@@ -234,8 +401,4 @@ ul {
     #logo_ofertacash {
         width: 350px;
     }
-}
-
-#logo_nav {
-    margin-top: 15px;
 }
