@@ -19,9 +19,9 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 
-Route::get('/cash_carteira', function() {
-    return view('cash_carteira');
-})->name('cash_carteira');
+Route::get('/cash-carteira', function() {
+    return view('cash-carteira');
+})->name('cash-carteira');
 
 Route::get('/quem_somos', function() {
     return view('quem_somos');

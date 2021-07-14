@@ -1,5 +1,9 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
 
+.cash {
+    margin-top: 150px;
+}
+
 .navbar {
     min-height: 150px;
 }
@@ -58,4 +62,38 @@
 
 #div02 {
     display: none;
+}
+
+.sobre {
+	margin-top: 150px;
+}
+
+#pagina-titulo {
+	font-family: 'Nunito';
+	padding-bottom: 10px;
+}
+
+#pagina-subtitulo {
+    font-family: 'Nunito';
+    border-bottom: 2px solid blue;
+    padding-bottom: 10px;
+    text-align: right;
+}
+
+footer .fundo {
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    height: auto !important;
+    background-color: rgba(11, 11, 72, 0.8);
+    padding: 70px;
+}
+
+#info-sobre {
+	margin-top: 20px;
+	margin-bottom: 10px;
+    text-align: center;
+    color: black;
+    font-family: 'Nunito';
 }

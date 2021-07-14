@@ -2,7 +2,10 @@
 
 @section('title', 'Page Title')
 
+<link rel="stylesheet" type="text/css" href="{{ asset('resources/css/home.css') }}">
+
 @section('content')
+
     <div id="caroulsel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class=carousel-caption>
@@ -201,4 +204,9 @@
     <div class="credits">
         <p class="text-center">OfertaCash 2021</p>
     </div>
+
+    <script>
+        var inicio = document.getElementById("inicio");
+        inicio.classList.add("active");
+    </script>
 @stop

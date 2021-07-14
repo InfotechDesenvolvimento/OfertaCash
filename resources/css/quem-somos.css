@@ -59,3 +59,31 @@
 #div02 {
     display: none;
 }
+
+.sobre {
+	margin-top: 150px;
+}
+
+#quem-somos-titulo {
+	font-family: 'Nunito';
+	border-bottom: 2px solid blue;
+	padding-bottom: 10px;
+}
+
+footer .fundo {
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    height: auto !important;
+    background-color: rgba(11, 11, 72, 0.8);
+    padding: 70px;
+}
+
+#info-sobre {
+	margin-top: 20px;
+	margin-bottom: 10px;
+    text-align: center;
+    color: black;
+    font-family: 'Nunito';
+}

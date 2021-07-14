@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
-    <!-- HOME CSS -->
+    <!-- LAYOUT CSS -->
     <link rel="stylesheet" type="text/css" href="{{ asset('resources/css/home.css') }}">
     <!-- BOOTSTRAP 5.0.2 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -43,13 +43,13 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav justify-content-center mx-auto">
                     <li class="nav-item text-center px-2">
-                        <a class="nav-link active" aria-current="page" href="{{ route('home') }}" id="inicio">Início</a>
+                        <a class="nav-link" aria-current="page" href="{{ route('home') }}" id="inicio">Início</a>
                     </li>
                     <li class="nav-item text-center px-2 sub-item">
                         <a class="nav-link" href="{{ route('quem_somos') }}" id="sobre">Quem somos</a>
                     </li>
                     <li class="nav-item text-center px-2 sub-item">
-                        <a class="nav-link" href="{{ route('cash_carteira') }}" id="cash">Cash Carteira</a>
+                        <a class="nav-link" href="{{ route('cash-carteira') }}" id="cash">Cash Carteira</a>
                     </li>
                     <li class="nav-item text-center px-2 sub-item">
                         <a class="nav-link" href="{{ route('landing_seja_credenciado') }}" id="lojista">Lojista</a>
@@ -71,6 +71,7 @@
 </body>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="{{ URL::asset('resources/js/jquery.mask.js')}}"></script>
 <script type="text/javascript">
     window.onscroll = function() {scrollFunction()};
 

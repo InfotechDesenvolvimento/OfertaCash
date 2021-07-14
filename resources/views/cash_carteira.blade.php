@@ -4,7 +4,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="{{ asset('resources/js/minha_conta.js') }}" ></script>
 
-@section('conteudo')
+@section('content')
 <div class="pag">
     <div class="div_texto">
         <br><br>
