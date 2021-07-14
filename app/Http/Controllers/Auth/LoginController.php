@@ -49,6 +49,8 @@ class LoginController extends Controller
 
         $user = Cliente::where('USUARIO', $usuario)->where('SENHA', $senha)->first();
 
+        echo $usuario;
+
         if($user != null) {
             if($user->cod_tipo_cliente == 1) {
                 Auth::guard('cliente')->login($user);

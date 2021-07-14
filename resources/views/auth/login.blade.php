@@ -7,16 +7,18 @@
 
 @section('content')
     
-    @if(isset($msg))
-        <div class="alert alert-primary" role="alert">
-            {{ $msg }}
-        </div>
-    @endif
                     
     <form class="form-signin" method="POST" action="{{ url('/login') }}" style="margin-top: 70px;">
+
         <img class="mb-4 mx-auto d-block" src="{{ asset('resources/images/logo_ofertacash.png') }}" width="150">
         <h3 class="text-center mb-3">Login</h3>
-        <input type="text" id="usuario" class="form-control" placeholder="Usuário" required autofocus>
+        @if(isset($msg))
+            <div class="alert alert-primary" role="alert">
+                {{ $msg }}
+            </div>
+        @endif
+        <input type ="hidden" name="_token" value="{{{ csrf_token() }}}">
+        <input type="text" id="usuario" name="usuario" class="form-control" placeholder="Usuário" required autofocus>
         <input type="password" id="senha" name="senha" class="form-control" placeholder="Senha" required>
         <div class="checkbox mb-3">
             <label>
