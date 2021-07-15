@@ -198,3 +198,8 @@ h3, a {
     width: 90px;
     background-color: #1a29e2;
 }
+
+[type="checkbox"]
+{
+    vertical-align:middle;
+}

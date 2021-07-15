@@ -8,162 +8,69 @@
     font-style: normal;
 }
 
-
-.box {
-    width: 94%;
-    margin-left: 3%;
-    border: 1px solid #fff;
-    border-radius: 25px;
-    background-color: rgba(255,255,255, 0.3);
-    font-family: 'FF Sizmo';
-    height: auto;
+#dashboard {
+    font-family: 'Nunito';
+    color: #212738;
+    font-size: 35px;
+    padding: 30px;
+    padding-bottom: 10px;
 }
 
-.box button{
-    padding-bottom: 25px;
+hr {
+    margin-bottom: 10px;
+    color: #989898 !important;
 }
 
-.box_button {
-    width: 94%;
-    margin-left: 3%;
-    border: 1px solid #fff;
-    border-radius: 25px;
-    background-color: rgba(255,255,255, 0.3);
-    font-family: 'FF Sizmo';
-    height: auto;
+.dashboard {
+    padding: 30px !important;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-image: linear-gradient(#EBEBEB, white);
+    margin: 20px;
 }
 
-.botao_padrao {
-    background-color: transparent;
-    border: 1px solid #fff;
-    border-radius: 25px;
-    width: 20%;
-    margin-left: 5%;
-    height: 30px;
-    margin-top: 10px;
-    font-family: 'FF Sizmo';
-    transition: border-width 0.4s linear;
-    color: #fff;
+.hidden {
+    display: none;
 }
 
-.botao_padrao:hover {
-    border: 3px solid #fff;
+.subtitulo-dashboard {
+    font-size: 20px;
+    color: #949494;
+    font-family: 'Gotham Medium';
 }
 
-.title {
-    width: 100%;
-    height: 75px;
+.valor-dashboard {
+    font-size: 40px;
+    font-family: 'Gotham Medium';
+}
+
+#saldo-atual {
+    color: #02CA95;
+}
+
+#saldo-payback {
+    color: #9877DC;
+}
+
+.simbolo {
+    padding: 10px;
+    text-align:center;
+    width: 100px !important;
+    height: 100px !important;
+}
+
+.simbolo-fa {
+    color: white; 
     text-align: center;
-    color: #fff;
+    vertical-align: middle;
+    margin-top: 15px;
 }
 
-.fundo {
-    background-color: rgba(0,0,0, 0.8);
-    width: 100%;
-    height: 100%;
-}
+@media screen and (min-width: 768px) {
+    .container {
+        width: 80%;
+    }
 
-h3 {
-    font-weight: bolder;
-    border-bottom: 1px solid #fff;
-}
-
-input {
-    background-color: transparent;
-    border: 1px solid #fff;
-    border-radius: 25px;
-    color: #fff;
-    text-align: center;
-    transition: border-width 0.4s linear;
-    font-family: 'FF Sizmo';
-}
-
-.input {
-    width: 60%;
-    margin-left: 20%;
-}
-
-input::placeholder {
-    color: #fff;
-}
-
-input:focus {
-    outline: none;
-    border: 3px solid #fff;
-}
-
-#id {
-    width: 20%;
-}
-
-#cpf {
-    width: 79%;
-}
-
-#valor_total {
-    width: 100%;
-}
-
-.detalhes-cliente, .detalhes-pagamento {
-    width: 90%;
-    margin-left: 5%;
-}
-
-.detalhes-pagamento select {
-    margin-top: 25px;
-    border-radius: 15px;
-    border: 1px solid #fff;
-}
-
-.detalhes-pagamento select:focus {
-    border: 3px solid #fff;
-    color: #000;
-}
-
-select {
-    background-color: transparent;
-    color: #fff;
-}
-
-select:focus {
-    outline: none;
-}
-
-#info-cliente {
-    display: none;
-    height: auto !important;
-}
-
-#info-pagamento {
-    display: none;
-    height: 100px;
-}
-
-#senha-cliente {
-    display: none;
-}
-
-.detalhes-cliente input {
-    width: 24%;
-    color: #fff;
-    font-family: 'FF Sizmo';
-}
-
-.input-label {
-    border: transparent !important;
-    background-color: transparent !important;
-    color: #fff;
-    font-family: 'FF Sizmo';
-}
-
-#erro_senha {
-    display: none;
-}
-
-#sucesso_senha {
-    display: none;
-}
-
-#erro-cliente, #erro-valor, #erro-saldo, #erro-cpf-id, #erro-ativada {
-    display: none;
+    .card01 {
+        margin-top: 20px;
+    }
 }
