@@ -3,7 +3,22 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <link rel="stylesheet" href="{{ asset('resources/css/cliente/credenciadas.css') }}">
 
-@section('conteudo')
+@section('content')
+    <style type="text/css">
+        #pagamentos_clientes {
+            color: var(--white-color);
+        }
+
+        #pagamentos_clientes::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 2px;
+            height: 32px;
+            background-color: var(--white-color)
+        }
+    </style>
+
         <div class="box">
             <div class="title">
                 <h3>Pagamentos Pendentes</h3>

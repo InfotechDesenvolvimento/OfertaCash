@@ -4,7 +4,22 @@
 <link rel="stylesheet" href="{{ asset('resources/css/cliente/credenciadas.css') }}">
 <script type="text/javascript" src="{{ asset('resources/js/cliente/extratos.js')}}"></script>
 
-@section('conteudo')
+@section('content')
+    <style type="text/css">
+        #extratos_cliente {
+            color: var(--white-color);
+        }
+
+        #extratos_cliente::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 2px;
+            height: 32px;
+            background-color: var(--white-color)
+        }
+    </style>
+
         <div class="box">
             <div class="title">
                 <h3>Extratos</h3>

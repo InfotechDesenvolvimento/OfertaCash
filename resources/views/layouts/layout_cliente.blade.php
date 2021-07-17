@@ -41,62 +41,62 @@
                         <span class="nav_logo-name" id="logo-name" style="display: none">OfertaCash</span>
                     </a>
                     <div class="nav_list">
-                        <a href="{{ route('cliente.home') }}" class="nav_link active">
+                        <a href="{{ route('cliente.home') }}" class="nav_link" id="inicio_cliente">
                             <i class="fas fa-home"></i>
                             <span class="nav_name">
                                 Início
                             </span>
                         </a>
-                        <a href="{{ route('cliente.credenciadas') }}" class="nav_link">
+                        <a href="{{ route('cliente.credenciadas') }}" class="nav_link" id="credenciadas_cliente">
                             <i class="fas fa-project-diagram"></i>
                             <span class="nav_name">
                                 Redes Credenciadas
                             </span>
                         </a>
-                            <a href="{{ route('cliente.pagamentos_pendentes') }}" class="nav_link">
-                                <i class="fas fa-coins"></i>
-                                <span class="nav_name">
-                                    Pagamentos Pendentes
-                                </span>
-                            </a>
-                            <a href="{{ route('cliente.extratos') }}" class="nav_link">
-                                <i class="fas fa-receipt"></i>
-                                <span class="nav_name">
-                                    Extratos
-                                </span>
-                            </a>
-                            <a href="#disputas" class="nav_link">
-                                <i class="fas fa-compress-alt"></i>
-                                <span class="nav_name">
-                                    Disputas
-                                </span>
-                            </a>
-                            <a href="#disputas" class="nav_link">
-                                <i class="fas fa-file-invoice-dollar"></i>
-                                <span class="nav_name">
-                                    Faturas
-                                </span>
-                            </a>
-                            <a href="#disputas" class="nav_link">
-                                <i class="fas fa-star"></i>
-                                <span class="nav_name">
-                                    Satisfação do Cliente
-                                </span>
-                            </a>
-                            <a href="#disputas" class="nav_link">
-                                <i class="fas fa-comments-dollar"></i>
-                                <span class="nav_name">
-                                    Transferências
-                                </span>
-                            </a>
-                            <a href="{{ route('logout') }}" class="nav_link">
-                                <i class="fas fa-sign-out-alt"></i>
-                                <span class="nav_name">
-                                    Sair
-                                </span>
-                            </a>
+                        <a href="{{ route('cliente.pagamentos_pendentes') }}" class="nav_link" id="pagamentos_clientes">
+                            <i class="fas fa-coins"></i>
+                            <span class="nav_name">
+                                Pagamentos Pendentes
+                            </span>
+                        </a>
+                        <a href="{{ route('cliente.extratos') }}" class="nav_link" id="extratos_cliente">
+                            <i class="fas fa-receipt"></i>
+                            <span class="nav_name">
+                                Extratos
+                            </span>
+                        </a>
+                        <!-- <a href="#disputas" class="nav_link">
+                            <i class="fas fa-compress-alt"></i>
+                            <span class="nav_name">
+                                Disputas
+                            </span>
+                        </a>
+                        <a href="#disputas" class="nav_link">
+                            <i class="fas fa-file-invoice-dollar"></i>
+                            <span class="nav_name">
+                                Faturas
+                            </span>
+                        </a>
+                        <a href="#disputas" class="nav_link">
+                            <i class="fas fa-star"></i>
+                            <span class="nav_name">
+                                Satisfação do Cliente
+                            </span>
+                        </a>
+                        <a href="#disputas" class="nav_link">
+                            <i class="fas fa-comments-dollar"></i>
+                            <span class="nav_name">
+                                Transferências
+                            </span>
+                        </a> -->
                     </div>
                 </div>
+                <a href="{{ route('logout') }}" class="nav_link">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span class="nav_name">
+                        Sair
+                    </span>
+                </a>
             </nav>
         </div>
         @yield('content')
