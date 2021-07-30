@@ -21,7 +21,90 @@
         </div>
     </div>
 
-    <div class="container p-5 mt-0">
+    <div class="container mb-0" data-aos="fade-up-right">
+        <div class="row align-items-center">
+            <div class="col-sm-4 mb-5">
+                <h4 id="pagina-subtitulo2">Faça uma simulação!</h4>
+            </div>
+            <div class="col-sm-8"></div>
+
+			<div class="col-sm-6">
+				<div class="card h-100" id="resultado-simulacao">
+					<div class="card-body mt-3">
+						<h5 class="card-title text-center">Quantidade de Parcelas</h5>
+						<p class="card-text text-center" id="legenda">Selecione a quantidade de parcelas desejadas.</p>
+						<div class="d-flex justify-content-center mb-4">
+							<div class="d-inline text-white px-4 py-2 select-parcela" id="botao-01">
+								<a id="mudar-01">1</a>
+							</div>
+							<div class="d-inline text-white px-4 py-2 select-parcela" id="botao-02">
+								<a id="mudar-02">2</a>
+							</div>
+							<div class="d-inline text-white px-4 py-2 select-parcela" id="botao-03">
+								<a id="mudar-03">3</a>
+							</div>
+							<div class="d-inline text-white px-4 py-2 select-parcela" id="botao-04">
+								<a id="mudar-04">4</a>
+							</div>
+							<div class="d-inline text-white px-4 py-2 select-parcela" id="botao-05">
+								<a id="mudar-05">5</a>
+							</div>
+							<div class="d-inline text-white px-4 py-2 select-parcela" id="botao-06">
+								<a id="mudar-06">6</a>
+							</div>
+						</div>
+						<div class="row align-items-center" style="margin-top: 30px;">
+							<!-- Parcela 01 -->
+				            <div class="col-sm-6">
+				                <p class="text-center">Parcelas de:</p>
+				            </div>
+				            <div class="col-sm-6">
+				                <p class="text-center" id="valor-simulacao">R$ 30,000.00</p>
+				            </div>
+				        </div>
+					</div>
+				</div>
+			</div>
+
+            <div class="col-sm-6">
+				<div class="card h-100" id="simulacao-cash">
+					<div class="card-body">
+						<div class="col-sm-12">
+			                <div class="d-flex justify-content-center align-items-center p-5 pb-0">
+								<i class="bi bi-dash-circle fa-lg btn-soma" onclick="menos()"></i>
+			                	<input type="text" name="simulacao-dinheiro" id="simulacao-dinheiro" class="dinheiro" value="30,000.00" maxlength="12">
+								<i class="bi bi-plus-circle fa-lg btn-soma" id="mais" onclick="mais()"></i>
+			                </div>
+			            </div>
+			            <div class="col-sm-12 mt-3">
+			                <div class="d-flex justify-content-center align-items-center">
+					            <p class="min-max" style="margin-right: 15px;">Min: R$ 30.000</p>
+					            <p class="min-max" style="margin-left: 15px;">Max: R$ 3.000.000</p>
+			                </div>
+			            </div>
+			            <div class="col-sm-12 mt-3">
+			                <div class="d-flex justify-content-center align-items-center">
+					            <p id="info-juros">Em até 6 parcelas de 6% de juros ao mês!</p>
+			                </div>
+			            </div>
+			            <div class="col-sm-12 mt-3 mb-5">
+			            	<div class="d-flex justify-content-center">
+			            		<small class="text-muted">
+				                    <a href="/ofertacash/login" class="btn-grad">
+				                    	Solicitar Empréstimo <i class="bi bi-arrow-right"></i>
+				                    </a>
+				                </small>
+			            	</div>
+			            </div>
+					</div>
+				</div>
+			</div>
+
+        </div>
+    </div>
+    	
+    </div>
+    <div class="container p-5 mt-0 d-none">
 		<form action="{{ route('enviar.credenciamento_cliente') }}" method="POST">
 			<input type ="hidden" name="_token" value="{{{ csrf_token() }}}">
 			<div class="form-row">
@@ -134,10 +217,67 @@
     <script>
         var cash = document.getElementById("cash");
         cash.classList.add("active");
-
         $(document).ready(function(){
 		    $('.cpf').mask('000.000.000-00', {reverse: true});
+		    $('.dinheiro').mask('000.000.000.000.000,00', {reverse: true});
+
+		    $("#botao-01").click(function() {
+
+		    	dinheiro = document.getElementById("simulacao-dinheiro").value;
+		    	dinheiro = parseInt(dinheiro) * 1;
+		    	dinheiro = format2((dinheiro*1000), '');
+
+				document.getElementById('valor-simulacao').innerHTML = "R$ " + dinheiro;
+			});
+
+			$("#botao-02").click(function() {
+				dinheiro = document.getElementById("simulacao-dinheiro").value;
+		    	dinheiro = parseInt(dinheiro) * 1;
+
+		    	dinheiro = format2(((dinheiro*1000) / 2)*0.06 + ((dinheiro*1000) / 2), '');
+
+				document.getElementById('valor-simulacao').innerHTML = "R$ " + dinheiro;
+			});
+
+			$("#botao-03").click(function() {
+				dinheiro = document.getElementById("simulacao-dinheiro").value;
+		    	dinheiro = parseInt(dinheiro) * 1;
+		    	
+		    	dinheiro = format2(((dinheiro*1000) / 3)*0.06 + ((dinheiro*1000) / 3), '');
+
+				document.getElementById('valor-simulacao').innerHTML = "R$ " + dinheiro;
+			});
+
+			$("#botao-04").click(function() {
+				dinheiro = document.getElementById("simulacao-dinheiro").value;
+		    	dinheiro = parseInt(dinheiro) * 1;
+
+		    	dinheiro = format2(((dinheiro*1000) / 4)*0.06 + ((dinheiro*1000) / 4), '');
+
+				document.getElementById('valor-simulacao').innerHTML = "R$ " + dinheiro;
+			});
+
+			$("#botao-05").click(function() {
+				dinheiro = document.getElementById("simulacao-dinheiro").value;
+		    	dinheiro = parseInt(dinheiro) * 1;
+		    	
+		    	dinheiro = format2(((dinheiro*1000) / 5)*0.06 + ((dinheiro*1000) / 5), '');
+
+				document.getElementById('valor-simulacao').innerHTML = "R$ " + dinheiro;
+			});
+
+			$("#botao-06").click(function() {
+				dinheiro = document.getElementById("simulacao-dinheiro").value;
+		    	dinheiro = parseInt(dinheiro) * 1;
+		    	
+		    	dinheiro = format2(((dinheiro*1000) / 6)*0.06 + ((dinheiro*1000) / 6), '');
+
+				document.getElementById('valor-simulacao').innerHTML = "R$ " + dinheiro;
+			});
 	  	});
+
     </script>
+    <script src="{{ asset('resources/js/cash-carteira.js') }}"></script>
     <script src="{{ asset('resources/js/estados-cidades.js') }}"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-maskmoney/3.0.2/jquery.maskMoney.min.js"></script>
 @stop

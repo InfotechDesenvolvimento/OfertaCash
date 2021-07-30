@@ -1,0 +1,36 @@
+table {
+	background-color: white !important;
+	border-radius: 20px;
+	font-family: 'Nunito';
+}
+
+.paginate_button {
+	margin-right: 20px;
+	background-color: #adb5bd78;
+	padding: 10px 15px 10px 15px;
+	border-radius: 10px;
+	font-family: 'Nunito';
+	cursor: pointer;
+	font-size: 15px;
+}
+
+.paginate_button:hover {
+	margin-right: 20px;
+	background-color: #adb5bda8;
+	padding: 10px 15px 10px 15px;
+	border-radius: 10px;
+	font-family: 'Nunito';
+	cursor: pointer;
+}
+
+#tabela_info {
+	color: #6c757dc4;
+}
+
+td {
+ border-style : hidden!important;
+}
+
+.table>:not(:last-child)>:last-child>* {
+	border-bottom-color: #6c757d33 !important;
+}

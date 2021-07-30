@@ -23,7 +23,7 @@
     <h2 id="dashboard" style="margin-top: 80px;">Redes Credenciadas</h2>
     <hr>
 
-    <div class="filtro_div">
+    <div class="filtro_div mb-5">
         <div class="container pt-3">
             <div class="row">
                 <div class="col">
@@ -64,7 +64,7 @@
     <input type="hidden" name="ufCliente" id="ufCliente" value="{{ $estado->uf }}">
     <input type="hidden" name="ufClienteCodigo" id="ufClienteCodigo" value="{{ Auth::user()->cod_uf }}">
     
-<!--     <table id="tabela" class="table table-striped table-bordered">
+    <table id="tabela" class="table">
         <thead>
             <tr>
                 <th id="col4"> Empresa </th> 
@@ -76,7 +76,7 @@
         </thead>
         <tbody id="itens"> 
         </tbody>
-    </table> -->
+    </table>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="//cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>

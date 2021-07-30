@@ -28,9 +28,9 @@
                 <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="fas fa-user-circle fa-2x"></i>
                 </button>
-                <ul class="dropdown-menu dropdown-menu-end">
+                <!-- <ul class="dropdown-menu dropdown-menu-end">
                     <li><button class="dropdown-item" type="button">Logout</button></li>
-                </ul>
+                </ul> -->
             </div>
         </header>
 
