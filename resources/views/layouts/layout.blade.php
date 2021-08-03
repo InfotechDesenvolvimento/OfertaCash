@@ -52,7 +52,7 @@
                         <a class="nav-link" href="{{ route('cash-carteira') }}" id="cash">Cash Carteira</a>
                     </li>
                     <li class="nav-item text-center px-2 sub-item">
-                        <a class="nav-link" href="{{ route('landing_seja_credenciado') }}" id="lojista">Lojista</a>
+                        <a class="nav-link" href="{{ route('credenciamento') }}" id="lojista">Lojista</a>
                     </li>
                     <li class="nav-item text-center px-2 sub-item">
                         <a class="nav-link" href="{{ route('credito') }}" id="credito">Crédito</a>

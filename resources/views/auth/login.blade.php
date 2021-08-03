@@ -7,11 +7,9 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 @section('content')
-    
-                    
     <form class="form-signin w3-animate-opacity" method="POST" action="{{ url('/login') }}" style="margin-top: 70px;">
-
-        <img class="mb-4 mx-auto d-block" src="{{ asset('resources/images/logo_ofertacash.png') }}" width="150" style="padding-left: 4px">
+        <img class="mb-4 mx-auto d-block" src="{{ asset('resources/images/logo_ofertacash.png') }}" 
+            width="150" style="padding-left: 4px">
         <h3 class="text-center mb-3">Login</h3>
         @if(isset($msg))
             <div class="alert alert-primary" role="alert">
@@ -26,9 +24,8 @@
             <button class="btn btn-primary btn-block" type="submit">Entrar</button>
         </div>
     </form>
-
     <script>
-        var login = document.getElementById("login");
-        login.classList.add("active");
+        var pagina = document.getElementById("login");
+        pagina.classList.add("active");
     </script>
 @stop

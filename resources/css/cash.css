@@ -91,121 +91,17 @@
     font-size: 22px;
 }
 
-footer .fundo {
-    text-align: center;
-    align-items: center;
-    align-content: center;
-    width: 100%;
-    height: auto !important;
-    background-color: rgba(11, 11, 72, 0.8);
-    padding: 70px;
-}
-
-#info-sobre {
-	margin-top: 20px;
-	margin-bottom: 10px;
-    text-align: center;
-    color: black;
-    font-family: 'Nunito';
-}
-
-.min-max {
-    font-family: 'Nunito';
-    color: #8a8a8a;
-    font-size: 16px;
-}
-
-
-#info-juros {
-    margin-bottom: 15px;
-    text-align: center;
-    color: black;
-    font-family: 'Nunito';
-    font-size: 17px;
-}
-
-#simulacao-dinheiro { 
-    text-align: center;
-    outline: 0;
-    border-width: 0 0 1px;
-    border-color: grey;
-    padding: 10px;
-    font-family: 'Nunito';
-    font-size: 30px;
-}
-
-#simulacao-dinheiro:focus {
-  border-color: blue;
-}
-
-.btn-soma {
-    color: blue !important;
-}
-
-.btn-soma:hover {
-    color: black !important;
-    cursor: pointer;
-}
-
-#simulacao-cash {
-    background-color: #eceaf9;
-    border-style: none;
-}
-
-#resultado-simulacao {
-    background-color: white;
-    border-style: none;
-}
-
-input[type="number"] {
-  background-color : transparent; 
-  width: 100%;
-}
-
-/* Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-/* Firefox */
-input[type=number] {
-  -moz-appearance: textfield;
-}
-
-#legenda {
-    color: grey !important;
-}
-
-#botao-01 {
-    border-top-left-radius: 5px 5px !important;
-    border-bottom-left-radius: 5px 5px !important;
-}
-
-#botao-06 {
-    border-top-right-radius: 5px 5px !important;
-    border-bottom-right-radius: 5px 5px !important;
-}
-
-.select-parcela {
-    background-color: #526bff !important;
-}
-
-.select-parcela:hover {
-    background-color: #0d2ef0 !important;
-    cursor: pointer;
-}
-
-.card-title {
-    font-size: 30px;
-}
-
 .chamada {
     font-size: 34px !important;
     font-family: 'Gotham Medium';
 }
 
-.my-class {
-    background-color: #0d2ef0 !important;
+.info-credito {
+    font-family: 'Nunito';
+    font-size: 24px;
+}
+
+.lista p {
+    font-family: 'Nunito';
+    font-size: 16px;
 }

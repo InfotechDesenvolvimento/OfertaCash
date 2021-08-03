@@ -23,16 +23,27 @@
     </div>
 
     <div class="container p-5 mt-0">
+        @if(isset($success))
+            <div class="alert alert-success" role="alert">
+              {{ $success }}
+            </div>
+        @endif
+
+        @if(isset($error))
+            <div class="alert alert-success" role="alert">
+              {{ $error }}
+            </div>
+        @endif
         <form action="{{ route('enviar.credenciamento_landing') }}" method="POST">
             <input type ="hidden" name="_token" value="{{{ csrf_token() }}}">
             <div class="form-row">
                 <div class="mb-3">
                     <label for="nome_responsavel" class="form-label">Nome do Responsável</label>
-                    <input type="text" class="form-control" id="nome_responsavel" name="nome_responsavel" placeholder="Digite o nome do responsável">
+                    <input type="text" class="form-control" id="nome_responsavel" name="nome_responsavel" placeholder="Digite o nome do responsável" required>
                 </div>
                 <div class="mb-3">
                     <label for="cnpj" class="form-label">CNPJ</label>
-                    <input type="text" class="form-control cnpj" id="cnpj" placeholder="Digite o CNPJ" inputmode="numeric" required>
+                    <input type="text" class="form-control cnpj" id="cnpj" placeholder="Digite o CNPJ" name="cnpj" inputmode="numeric" required>
                     <div class="invalid-feedback" id="invalid-cnpj">
                         CNPJ Inválido
                     </div>
@@ -43,11 +54,11 @@
                 </div>
                 <div class="mb-3">
                     <label for="ddd" class="form-label">Telefone/Celular</label>
-                    <input type="text" name="celular" id="celular" placeholder="Digite o número do Telefone/Celular" class="form-control phone">
+                    <input type="text" name="celular" id="celular" placeholder="Digite o número do Telefone/Celular" class="form-control phone" required>
                 </div>
                 <div class="form-group mb-3">
                     <label for="email">E-mail</label>
-                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Digite o seu e-mail">
+                    <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" required placeholder="Digite o seu e-mail">
                     <small id="emailHelp" class="form-text text-muted">Nós nunca iremos compartilhar o seu e-mail com alguém.</small>
                 </div>
                 <div class="form-check mb-3">
@@ -64,28 +75,15 @@
             <button type="submit" class="btn btn-primary">Enviar</button>
         </form>
     </div>
-
-    <footer>
-        <div class="fundo">
-            <h2 data-aos="fade-down">Oferta Cash -  Soluções Financeiras e Comerciais</h2>
-            <p id="information" data-aos="fade-up">Somos a primeira plataforma de cashback do país a integrar num só local:
-                <br>gestão de benefícios, gestão de recompensas próprias e de terceiros, banco digital,
-                <br>conta digital, soluções de crédito para empresas e seus clientes.</p>
-        </div>
-    </footer>
-
-    <div class="credits">
-        <p class="text-center">OfertaCash 2021</p>
-    </div>
-
+    @include('layouts.footer')
     <script>
-        var lojista = document.getElementById("lojista");
-        lojista.classList.add("active");
+        var pagina = document.getElementById("lojista");
+        pagina.classList.add("active");
 
         $(document).ready(function(){
             $('.cpf').mask('000.000.000-00', {reverse: true});
             $('.cnpj').mask('00.000.000/0000-00', {reverse: true});
-            $('.phone').mask('0000-0000');
+            $('.phone').mask('00000-0000');
         });
     </script>
     <script src="{{ asset('resources/js/estados-cidades.js') }}"></script>

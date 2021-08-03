@@ -6,7 +6,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
 <script src="{{ asset('resources/js/seja_credenciado.js') }}" ></script>
 
-@section('conteudo')
+@section('content')
 <div class="pag">
     <div class="div_texto">
         <br><br>

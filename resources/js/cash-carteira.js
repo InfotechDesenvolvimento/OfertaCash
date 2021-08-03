@@ -64,9 +64,9 @@ $(document).ready(function(){
 		dinheiro = parseInt(dinheiro);
 
 		if(dinheiro < 100 || dinheiro > 50000) {
-			dinheiro = 100;
-			document.getElementById("simulacao-dinheiro").value = 
-			dinheiro.toLocaleString("br",{ minimumFractionDigits: 2 , style: 'currency', currency: 'BRL' });
+			dinheiro = parseInt(100);
+
+			document.getElementById("simulacao-dinheiro").value = dinheiro.toLocaleString("en",{useGrouping: false,minimumFractionDigits: 2});
 		}
 
 		dinheiro = dinheiro + (dinheiro * 0.06);
@@ -125,7 +125,7 @@ $(document).ready(function(){
 		if(dinheiro < 100 || dinheiro > 50000) {
 			dinheiro = 100;
 			document.getElementById("simulacao-dinheiro").value = 
-			dinheiro.toLocaleString("br",{ minimumFractionDigits: 2 , style: 'currency', currency: 'BRL' });
+			dinheiro.toLocaleString("en",{useGrouping: false,minimumFractionDigits: 2});
 		}
 
 		dinheiro = (dinheiro / 3) + (dinheiro * 0.06);
@@ -155,7 +155,7 @@ $(document).ready(function(){
 		if(dinheiro < 100 || dinheiro > 50000) {
 			dinheiro = 100;
 			document.getElementById("simulacao-dinheiro").value = 
-			dinheiro.toLocaleString("br",{ minimumFractionDigits: 2 , style: 'currency', currency: 'BRL' });
+			dinheiro.toLocaleString("en",{useGrouping: false,minimumFractionDigits: 2});
 		}
 
 		dinheiro = (dinheiro / 4) + (dinheiro * 0.06);
@@ -185,7 +185,7 @@ $(document).ready(function(){
 		if(dinheiro < 100 || dinheiro > 50000) {
 			dinheiro = 100;
 			document.getElementById("simulacao-dinheiro").value = 
-			dinheiro.toLocaleString("br",{ minimumFractionDigits: 2 , style: 'currency', currency: 'BRL' });
+			dinheiro.toLocaleString("en",{useGrouping: false,minimumFractionDigits: 2});
 		}
 
 		dinheiro = (dinheiro / 5) + (dinheiro * 0.06);
@@ -215,7 +215,7 @@ $(document).ready(function(){
 		if(dinheiro < 100 || dinheiro > 50000) {
 			dinheiro = 100;
 			document.getElementById("simulacao-dinheiro").value = 
-			dinheiro.toLocaleString("br",{ minimumFractionDigits: 2 , style: 'currency', currency: 'BRL' });
+			dinheiro.toLocaleString("en",{useGrouping: false,minimumFractionDigits: 2});
 		}
 
 		dinheiro = (dinheiro / 6) + (dinheiro * 0.06);

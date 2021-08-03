@@ -21,7 +21,7 @@ class CredenciamentoController extends Controller
     }
 
     public function landing() {
-        return view('landing_seja_credenciado');
+        return view('credenciamento');
     }
 
     public function getCredenciadas(Request $request) {
@@ -44,30 +44,25 @@ class CredenciamentoController extends Controller
     }
 
     public function enviarCredenciamentoLanding(Request $request) {
-        $credenciamento = $request->all();
 
+        $credenciamento = $request->all();
         $credenciamento['nome_responsavel'] = strtoupper($credenciamento['nome_responsavel']);
 
         $cred = new Credenciamento();
-
         $cred->NOME = $credenciamento['nome_responsavel'];
         $cred->CNPJ = $credenciamento['cnpj'];
         $cred->DDD = $credenciamento['ddd'];
         $cred->CELULAR = $credenciamento['celular'];
-        $cred->FONE = $credenciamento['telefone'];
         $cred->EMAIL = $credenciamento['email'];
         $cred->COD_STATUS = 1;
         $cred->DATA_SOLICITACAO = date('Y-m-d');
 
         if($cred->save()) {
-            $ramos = RamoAtividade::all();
-            $bancos = Banco::all();
-            $cred->refresh();
-            return view('seja_credenciado', compact('cred', 'ramos', 'bancos'));
+            return view('credenciamento', ['success' => 'Cadastro realizado com sucesso.']);
         } else {
-            $msg = "Não foi possível enviar solicitação de credenciamento!";
-            return view('seja_credenciado_landing', compact('msg'));
+            return view('credenciamento', ['error' => 'Não foi possível enviar sua solicitação.']);
         }
+
     }
 
     public function enviarCredenciamento(Request $request) {
