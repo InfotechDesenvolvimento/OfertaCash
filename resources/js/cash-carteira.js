@@ -1,83 +1,228 @@
 function menos(){
 	var formato = { minimumFractionDigits: 2 , style: 'currency', currency: 'BRL' };
 
-	dinheiro = document.getElementById("simulacao-dinheiro").value.replace('R$ ','');
+	dinheiro = document.getElementById("simulacao-dinheiro").value;
+	dinheiro = parseInt(dinheiro);
 
-	//console.log(dinheiro);
-	
-	if(dinheiro == "30,000.00" || dinheiro == "30.000,00") {
-		dinheiro = 30;
+	if(dinheiro > 100) {
+		if(dinheiro < 1000) {
+			dinheiro = dinheiro - 100;
+		} else {
+			dinheiro = dinheiro - 1000;
+		}
 	} else {
-		dinheiro = parseInt(dinheiro) * 1;
-		dinheiro = format2((dinheiro*1000)-1000, '');
-
-		//dinheiro = dinheiro.toLocaleString('pt-BR', formato);
-		document.getElementById("simulacao-dinheiro").value = dinheiro;
+		dinheiro = 100;
 	}
+
+	dinheiro = dinheiro.toLocaleString("en",{useGrouping: false,minimumFractionDigits: 2});
+
+	document.getElementById("simulacao-dinheiro").value = dinheiro;
 }
 
 function mais(){
 	var formato = { minimumFractionDigits: 2 , style: 'currency', currency: 'BRL' };
 
-	dinheiro = document.getElementById("simulacao-dinheiro").value.replace('R$ ','');
-	
-	if(dinheiro.length == 12) {
-		dinheiro = 30;
-	}
+	dinheiro = document.getElementById("simulacao-dinheiro").value;
+	dinheiro = parseInt(dinheiro);
 
-	dinheiro = parseInt(dinheiro) * 1;
-	dinheiro = format2((dinheiro*1000)+1000, '');
-
-	//console.log(dinheiro);
-
-	//dinheiro = dinheiro.toLocaleString('pt-BR', formato);
-	document.getElementById("simulacao-dinheiro").value = dinheiro;
-
-	//dinheiro = dinheiro.toLocaleString('pt-BR', formato);
-/*	console.log(dinheiro);
-
-	soma = parseInt(1000);
-	soma = parseInt(dinheiro)*1000 + soma;
-
-	console.log(soma);
-
-	dinheiro = soma;
-	document.getElementById("simulacao-dinheiro").value = "R$ " + dinheiro + ",00";
-
-	document.write(format2(30000+1000, '$') + '<br />')*/;
-
-/*	let dinheiro_formatado = dinheiro.split(',')[0];
-	let tamanho = dinheiro.length;
-	//alert(dinheiro.length);
-
-	dinheiro = dinheiro.replaceAll(' ','');
-	
-	dinheiro = dinheiro.toLocaleString('pt-BR', formato);
-	dinheiro = parseFloat(dinheiro);
-
-	//alert(dinheiro);
-
-	dinheiro = dinheiro + 1;
-
-	if(tamanho == 9) {
-		dinheiro = dinheiro * 1000;
-	} else if (tamanho == 10) {
-		dinheiro = dinheiro * 10000;
-	}
-
-	//dinheiro = dinheiro * 1000;
-	dinheiro = parseFloat(dinheiro);
-
-	if(dinheiro <= 3000000) {
-		dinheiro = dinheiro.toLocaleString('pt-BR', formato);
-		document.getElementById("simulacao-dinheiro").value = dinheiro;
+	if(dinheiro < 50000) {
+		if(dinheiro < 1000) {
+			dinheiro = dinheiro + 100;
+		} else {
+			dinheiro = dinheiro + 1000;
+		}
 	} else {
-		let money = 30000;
-		dinheiro = money.toLocaleString('pt-BR', formato);
-		document.getElementById("simulacao-dinheiro").value = dinheiro;
-	}*/
+		dinheiro = 50000;
+	}
+
+	dinheiro = dinheiro.toLocaleString("en",{useGrouping: false,minimumFractionDigits: 2});
+
+	document.getElementById("simulacao-dinheiro").value = dinheiro;
 }
 
 function format2(n, currency) {
   return currency + n.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
 }
+
+
+$(document).ready(function(){
+
+	$("#botao-01").click(function() {
+
+		document.getElementById('botao-01').classList.add("my-class");
+
+		//document.getElementById('botao-01').classList.remove("my-class");
+		document.getElementById('botao-02').classList.remove("my-class");
+		document.getElementById('botao-03').classList.remove("my-class");
+		document.getElementById('botao-04').classList.remove("my-class");
+		document.getElementById('botao-05').classList.remove("my-class");
+		document.getElementById('botao-06').classList.remove("my-class");
+
+		document.getElementById('parcela-de').innerHTML = "Parcela de: ";
+
+		dinheiro = document.getElementById("simulacao-dinheiro").value;
+		dinheiro = parseInt(dinheiro);
+
+		if(dinheiro < 100 || dinheiro > 50000) {
+			dinheiro = 100;
+			document.getElementById("simulacao-dinheiro").value = 
+			dinheiro.toLocaleString("br",{ minimumFractionDigits: 2 , style: 'currency', currency: 'BRL' });
+		}
+
+		dinheiro = dinheiro + (dinheiro * 0.06);
+
+		dinheiro = dinheiro.toLocaleString("br",{ minimumFractionDigits: 2 , style: 'currency', currency: 'BRL' });
+		
+		document.getElementById('valor-simulacao').innerHTML = dinheiro;
+	});
+
+	$("#botao-02").click(function() {
+
+		document.getElementById('botao-02').classList.add("my-class");
+
+		document.getElementById('botao-01').classList.remove("my-class");
+		//document.getElementById('botao-02').classList.remove("my-class");
+		document.getElementById('botao-03').classList.remove("my-class");
+		document.getElementById('botao-04').classList.remove("my-class");
+		document.getElementById('botao-05').classList.remove("my-class");
+		document.getElementById('botao-06').classList.remove("my-class");
+
+		document.getElementById('parcela-de').innerHTML = "Parcelas de: ";
+
+		dinheiro = document.getElementById("simulacao-dinheiro").value;
+		dinheiro = parseInt(dinheiro);
+
+		if(dinheiro < 100 || dinheiro > 50000) {
+			dinheiro = 100;
+			document.getElementById("simulacao-dinheiro").value = 
+			dinheiro.toLocaleString("en",{useGrouping: false,minimumFractionDigits: 2});
+		}
+
+		dinheiro = (dinheiro / 2) + (dinheiro * 0.06);
+
+		dinheiro = dinheiro.toLocaleString("br",{ minimumFractionDigits: 2 , style: 'currency', currency: 'BRL' });
+		
+		document.getElementById('valor-simulacao').innerHTML = dinheiro;
+	});
+
+	$("#botao-03").click(function() {
+
+		document.getElementById('botao-03').classList.add("my-class");
+
+		document.getElementById('botao-01').classList.remove("my-class");
+		document.getElementById('botao-02').classList.remove("my-class");
+		//document.getElementById('botao-03').classList.remove("my-class");
+		document.getElementById('botao-04').classList.remove("my-class");
+		document.getElementById('botao-05').classList.remove("my-class");
+		document.getElementById('botao-06').classList.remove("my-class");
+
+		document.getElementById('parcela-de').innerHTML = "Parcelas de: ";
+
+		dinheiro = document.getElementById("simulacao-dinheiro").value;
+
+		dinheiro = parseInt(dinheiro);
+
+		if(dinheiro < 100 || dinheiro > 50000) {
+			dinheiro = 100;
+			document.getElementById("simulacao-dinheiro").value = 
+			dinheiro.toLocaleString("br",{ minimumFractionDigits: 2 , style: 'currency', currency: 'BRL' });
+		}
+
+		dinheiro = (dinheiro / 3) + (dinheiro * 0.06);
+
+		dinheiro = dinheiro.toLocaleString("br",{ minimumFractionDigits: 2 , style: 'currency', currency: 'BRL' });
+		
+		document.getElementById('valor-simulacao').innerHTML = dinheiro;
+	});
+
+	$("#botao-04").click(function() {
+
+		document.getElementById('botao-04').classList.add("my-class");
+
+		document.getElementById('botao-01').classList.remove("my-class");
+		document.getElementById('botao-02').classList.remove("my-class");
+		document.getElementById('botao-03').classList.remove("my-class");
+		//document.getElementById('botao-04').classList.remove("my-class");
+		document.getElementById('botao-05').classList.remove("my-class");
+		document.getElementById('botao-06').classList.remove("my-class");
+
+		document.getElementById('parcela-de').innerHTML = "Parcelas de: ";
+
+		dinheiro = document.getElementById("simulacao-dinheiro").value;
+
+		dinheiro = parseInt(dinheiro);
+
+		if(dinheiro < 100 || dinheiro > 50000) {
+			dinheiro = 100;
+			document.getElementById("simulacao-dinheiro").value = 
+			dinheiro.toLocaleString("br",{ minimumFractionDigits: 2 , style: 'currency', currency: 'BRL' });
+		}
+
+		dinheiro = (dinheiro / 4) + (dinheiro * 0.06);
+
+		dinheiro = dinheiro.toLocaleString("br",{ minimumFractionDigits: 2 , style: 'currency', currency: 'BRL' });
+		
+		document.getElementById('valor-simulacao').innerHTML = dinheiro;
+	});
+
+	$("#botao-05").click(function() {
+
+		document.getElementById('botao-05').classList.add("my-class");
+
+		document.getElementById('botao-01').classList.remove("my-class");
+		document.getElementById('botao-02').classList.remove("my-class");
+		document.getElementById('botao-03').classList.remove("my-class");
+		document.getElementById('botao-04').classList.remove("my-class");
+		//document.getElementById('botao-05').classList.remove("my-class");
+		document.getElementById('botao-06').classList.remove("my-class");
+
+		document.getElementById('parcela-de').innerHTML = "Parcelas de: ";
+
+		dinheiro = document.getElementById("simulacao-dinheiro").value;
+
+		dinheiro = parseInt(dinheiro);
+
+		if(dinheiro < 100 || dinheiro > 50000) {
+			dinheiro = 100;
+			document.getElementById("simulacao-dinheiro").value = 
+			dinheiro.toLocaleString("br",{ minimumFractionDigits: 2 , style: 'currency', currency: 'BRL' });
+		}
+
+		dinheiro = (dinheiro / 5) + (dinheiro * 0.06);
+
+		dinheiro = dinheiro.toLocaleString("br",{ minimumFractionDigits: 2 , style: 'currency', currency: 'BRL' });
+		
+		document.getElementById('valor-simulacao').innerHTML = dinheiro;
+	});
+
+	$("#botao-06").click(function() {
+
+		document.getElementById('botao-06').classList.add("my-class");
+
+		document.getElementById('botao-01').classList.remove("my-class");
+		document.getElementById('botao-02').classList.remove("my-class");
+		document.getElementById('botao-03').classList.remove("my-class");
+		document.getElementById('botao-04').classList.remove("my-class");
+		document.getElementById('botao-05').classList.remove("my-class");
+		//document.getElementById('botao-06').classList.remove("my-class");
+
+		document.getElementById('parcela-de').innerHTML = "Parcelas de: ";
+
+		dinheiro = document.getElementById("simulacao-dinheiro").value;
+
+		dinheiro = parseInt(dinheiro);
+
+		if(dinheiro < 100 || dinheiro > 50000) {
+			dinheiro = 100;
+			document.getElementById("simulacao-dinheiro").value = 
+			dinheiro.toLocaleString("br",{ minimumFractionDigits: 2 , style: 'currency', currency: 'BRL' });
+		}
+
+		dinheiro = (dinheiro / 6) + (dinheiro * 0.06);
+
+		dinheiro = dinheiro.toLocaleString("br",{ minimumFractionDigits: 2 , style: 'currency', currency: 'BRL' });
+		
+		document.getElementById('valor-simulacao').innerHTML = dinheiro;
+	});
+
+});

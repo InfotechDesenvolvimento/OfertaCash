@@ -60,8 +60,6 @@
     </div>
 
     <input type="hidden" name="cidadeClienteCodigo" id="cidadeClienteCodigo" value="{{ Auth::user()->cod_cidade }}">
-    <input type="hidden" name="cidadeCliente" id="cidadeCliente" value="{{ $cidade->cidade }}">
-    <input type="hidden" name="ufCliente" id="ufCliente" value="{{ $estado->uf }}">
     <input type="hidden" name="ufClienteCodigo" id="ufClienteCodigo" value="{{ Auth::user()->cod_uf }}">
     
     <table id="tabela" class="table">

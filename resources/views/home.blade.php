@@ -196,8 +196,10 @@
 
     <footer>
         <div class="fundo">
-            <h2 data-aos="fade-down">The Power To Help You Succeed</h2>
-            <p id="information" data-aos="fade-up">Velit laborum incididunt voluptate ea incididunt quis sed sit esse in dolor et sint esse cupidatat ex dolore ut enim do dolore consectetur in quis amet dolor sint sed nulla sit et nulla esse ad id voluptate pariatur reprehenderit dolore aliquip ut ut exercitation proident cupidatat culpa sint cupidatat velit elit commodo dolor qui irure eiusmod occaecat ad excepteur ad aliqua et duis aute in dolor enim cillum nulla id proident in irure pariatur fugiat ad eu dolor ad consequat sed incididunt adipisicing reprehenderit cupidatat sunt tempor ut mollit anim consequat magna cupidatat dolore ad sed laborum in occaecat commodo irure nulla consectetur exercitation mollit aliqua tempor ad proident laboris laborum fugiat qui voluptate dolor reprehenderit mollit excepteur et sed non labore ut aliquip ut ex id aliquip sint enim cillum nisi.</p>
+            <h2 data-aos="fade-down">Oferta Cash -  Soluções Financeiras e Comerciais</h2>
+            <p id="information" data-aos="fade-up">Somos a primeira plataforma de cashback do país a integrar num só local:
+                <br>gestão de benefícios, gestão de recompensas próprias e de terceiros, banco digital,
+                <br>conta digital, soluções de crédito para empresas e seus clientes.</p>
         </div>
     </footer>
 

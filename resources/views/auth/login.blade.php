@@ -20,6 +20,7 @@
         @endif
         <input type ="hidden" name="_token" value="{{{ csrf_token() }}}">
         <input type="text" id="usuario" name="usuario" class="form-control" placeholder="Usuário" required autofocus>
+        <input type ="hidden" name="_token" value="{{{ csrf_token() }}}">
         <input type="password" id="senha" name="senha" class="form-control" placeholder="Senha" required>
         <div class="d-grid gap-2 mt-4">
             <button class="btn btn-primary btn-block" type="submit">Entrar</button>

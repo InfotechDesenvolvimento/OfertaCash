@@ -15,8 +15,8 @@ class Cliente extends Authenticatable
 
     protected $fillable = ['USUARIO', 'SENHA'];
     protected $hidden = ['SENHA', 'remember_token'];
-
-    protected $primaryKey = 'codigo';
+    public $timestamps = false;
+    protected $primaryKey = 'CODIGO';
     protected $table = 'clientes';
 
     /**
@@ -29,7 +29,7 @@ class Cliente extends Authenticatable
     ];
 
     public function cidade(){
-        return $this->hasOne(Cidade::class, 'codigo', 'cod_cidade');
+        return $this->hasOne(Cidade::class, 'CODIGO', 'COD_CIDADE');
     }
 
     public function ramo_atividade(){

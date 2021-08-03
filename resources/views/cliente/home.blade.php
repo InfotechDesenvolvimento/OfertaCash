@@ -38,7 +38,7 @@
                 </div>
                 <div class="col-6 card03">
                     <h3 class="subtitulo-dashboard">Saldo Payback</h3>
-                    <h2 class="valor-dashboard" id="saldo-payback">$ {{ Auth::user()->saldo_payback }}</h2>
+                    <h2 class="valor-dashboard" id="saldo-payback">$ {{ Auth::user()->SALDO_VALE }}</h2>
                 </div>
             </div>
         </div>

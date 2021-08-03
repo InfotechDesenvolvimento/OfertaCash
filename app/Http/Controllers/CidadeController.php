@@ -9,7 +9,9 @@ use App\Models\Cidade;
 class CidadeController extends Controller
 {
     public function getCidades(Request $request) {
+
         $cidades = Cidade::where('COD_UF', $request->get('codUF'))->get();
+        
         return json_encode($cidades);
     }
 }
