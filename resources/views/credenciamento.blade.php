@@ -42,12 +42,23 @@
                     <label for="nome_responsavel" class="form-label">Nome do Responsável</label>
                     <input type="text" class="form-control" id="nome_responsavel" name="nome_responsavel" placeholder="Digite o nome do responsável" required>
                 </div>
-                <div class="col-sm-6 mb-3">
+                <div class="col-sm-3 mb-3">
                     <label for="cnpj" class="form-label">CNPJ</label>
                     <input type="text" class="form-control cnpj" id="cnpj" placeholder="Digite o CNPJ" name="cnpj" inputmode="numeric" required>
                     <div class="invalid-feedback" id="invalid-cnpj">
                         CNPJ Inválido
                     </div>
+                </div>
+                <div class="col-sm-3 mb-3">
+                    <label for="categoria" class="form-label">Categoria</label>
+                    <select class="form-control" id="categoria" name="categoria" required>
+                        <option selected disabled>Escolha uma opção</option>
+                        @foreach($categorias as $categoria)
+                            <option value="{{ $categoria->RAMO_ATIVIDADE }}">
+                             {{ $categoria->RAMO_ATIVIDADE }} 
+                            </option>
+                        @endforeach
+                    </select>
                 </div>
                 <div class="col-sm-2 mb-3">
                     <label for="ddd" class="form-label">DDD</label>
@@ -63,7 +74,7 @@
                     <small id="emailHelp" class="form-text text-muted">Nós nunca iremos compartilhar o seu e-mail com alguém.</small>
                 </div>
                 <div class="form-check mb-3 pl-5" style="font-size: 14px; margin-left: 10px;">
-                    <input type="checkbox" class="form-check-input" id="termos">
+                    <input type="checkbox" class="form-check-input" id="termos" required>
                     <label class="form-check-label" for="exampleCheck1">
                         Concordo com os Termos do Contrato que regem essa operação: Ao se cadastrar, você aceita os
                         <a href="#">

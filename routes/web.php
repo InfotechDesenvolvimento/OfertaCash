@@ -31,9 +31,8 @@ Route::get('/credito', function() {
     return view('credito');
 })->name('credito');
 
-Route::get('/credenciamento', function() {
-    return view('credenciamento');
-})->name('credenciamento');
+
+Route::get('/credenciamento', 'App\Http\Controllers\CredenciamentoController@landing')->name('credenciamento');
 
 Route::get('/cash-carteira', 'App\Http\Controllers\CashCarteiraController@index')->name('cash-carteira');
 Route::post('/cash-carteira/cadastro', 'App\Http\Controllers\CashCarteiraController@cadastrarPessoaFisica')->name('cash.cadastro');

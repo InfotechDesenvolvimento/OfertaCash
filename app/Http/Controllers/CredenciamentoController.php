@@ -17,11 +17,15 @@ class CredenciamentoController extends Controller
     public function index(){
         $ramos = RamoAtividade::all();
         $bancos = Banco::all();
-        return view('seja_credenciado', compact('bancos', 'ramos'));
+        $categorias = RamoAtividade::all();
+
+        return view('seja_credenciado', compact('bancos', 'ramos', 'categorias'));
     }
 
     public function landing() {
-        return view('credenciamento');
+        $categorias = RamoAtividade::all();
+
+        return view('credenciamento', compact('categorias'));
     }
 
     public function getCredenciadas(Request $request) {
@@ -56,11 +60,14 @@ class CredenciamentoController extends Controller
         $cred->EMAIL = $credenciamento['email'];
         $cred->COD_STATUS = 1;
         $cred->DATA_SOLICITACAO = date('Y-m-d');
+        $cred->RAMO_ATIVIDADE = $credenciamento['categoria'];
+
+        $categorias = RamoAtividade::all();
 
         if($cred->save()) {
-            return view('credenciamento', ['success' => 'Cadastro realizado com sucesso.']);
+            return view('credenciamento', ['success' => 'Cadastro realizado com sucesso.'], compact('categorias'));
         } else {
-            return view('credenciamento', ['error' => 'Não foi possível enviar sua solicitação.']);
+            return view('credenciamento', ['error' => 'Não foi possível enviar sua solicitação.'], compact('categorias'));
         }
 
     }
