@@ -11,7 +11,7 @@
                 <h1 id="pagina-titulo"> Contato </h1>
             </div>
             <div class="col-sm-4">
-                <h4 id="pagina-subtitulo">Abra a sua conta!</h4>
+                <h4 id="pagina-subtitulo">Crie a sua Cash Carteira</h4>
             </div>
             <div class="col-sm-4 mt-3 contato-card">
                 <p class="info-01"> Falar sobre sobre sua a Conta </p>

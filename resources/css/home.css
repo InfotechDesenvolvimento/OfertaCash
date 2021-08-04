@@ -203,3 +203,9 @@ h3, a {
 {
     vertical-align:middle;
 }
+
+@media only screen and (max-width: 800px) {
+  #imagem01 {
+    display: none !important;
+  }
+}

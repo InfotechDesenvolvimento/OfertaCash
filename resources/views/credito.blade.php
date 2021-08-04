@@ -11,7 +11,7 @@
                 <h1 id="pagina-titulo">Crédito</h1>
             </div>
             <div class="col-sm-4">
-                <h4 id="pagina-subtitulo">Abra a sua conta!</h4>
+                <h4 id="pagina-subtitulo">Crie a sua Cash Carteira</h4>
             </div>
             <div class="col-sm-12 mt-3">
                 <p class="text-center info-credito">

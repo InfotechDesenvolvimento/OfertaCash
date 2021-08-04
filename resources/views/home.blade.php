@@ -64,15 +64,15 @@
                         <br>
                         <h6 class="card-subtitle mb-2 text-muted">
                             <i class="fas fa-check-circle"></i>
-                            Plataforma de Cash Back
+                            Plataforma de Cashback
                         </h6>
                         <br>
                         <h6 class="card-subtitle mb-2 text-muted">
                             <i class="fas fa-check-circle"></i>
-                            Soluções Financeiras
+                            Loja de Crédito
                         </h6>
                         <br>
-                        <h6 class="card-subtitle mb-2 text-muted">
+                        <h6 class="card-subtitle mb-2 text-muted d-none">
                             <i class="fas fa-check-circle"></i>
                             Condomínios
                         </h6>
@@ -98,10 +98,10 @@
                             <div class="fundo_i"><i class="fas fa-chart-line"></i></div>
                         </center>
                         <div class="card-body" style="border: none">
-                            <h5 class="card-title text-center mt-2">Plataforma de Cash Back</h5>
+                            <h5 class="card-title text-center mt-2">Plataforma de Cashback</h5>
                             <p class="card-text text-center">Pessoa Física, Pessoa Jurídica.</p>
                         </div>
-                        <div class="card-footer" style="border: none">
+                        <div class="card-footer" style="border: none; background-color: transparent;">
                             <small class="text-muted">
                                 <a href="#" class="btn-grad">Ver mais <i class="bi bi-arrow-right"></i></a>
                             </small>
@@ -114,10 +114,10 @@
                             <div class="fundo_i"><i class="fas far fa-credit-card"></i></div>
                         </center>
                         <div class="card-body" style="border: none">
-                            <h5 class="card-title text-center mt-2">Crédito</h5>
+                            <h5 class="card-title text-center mt-2">Loja de Crédito</h5>
                             <p class="card-text text-center">Empréstimos PJ, Crédito Pessoal, Antecipação de Crédito, Recebíveis de Cartão, Crédito Consignado.</p>
                         </div>
-                        <div class="card-footer" style="border: none">
+                        <div class="card-footer" style="border: none; background-color: transparent;">
                             <small class="text-muted">
                                 <a href="#" class="btn-grad">Ver mais <i class="bi bi-arrow-right"></i></a>
                             </small>
@@ -127,13 +127,13 @@
                 <div class="col">
                     <div class="card h-100" style="border: none">
                         <center>
-                            <div class="fundo_i"><i class="fas fa-wallet"></i></div>
+                            <div class="fundo_i"><i class="fas fa-handshake"></i></div>
                         </center>
                         <div class="card-body" style="border: none">
-                            <h5 class="card-title text-center mt-2">Conta Digital</h5>
-                            <p class="card-text text-center">Abra sua conta digital.</p>
+                            <h5 class="card-title text-center mt-2">Parcerias Comerciais</h5>
+                            <p class="card-text text-center">Afiliados, licenciados e desenvolvedores.</p>
                         </div>
-                        <div class="card-footer" style="border: none">
+                        <div class="card-footer" style="border: none; background-color: transparent;">
                             <small class="text-muted">
                                 <a href="#" class="btn-grad">Ver mais <i class="bi bi-arrow-right"></i></a>
                             </small>
@@ -145,13 +145,13 @@
                 <div class="col">
                     <div class="card h-100" style="border: none">
                         <center>
-                            <div class="fundo_i"><i class="fas fa-handshake"></i></div>
+                            <div class="fundo_i"><i class="fas fa-wallet"></i></div>
                         </center>
                         <div class="card-body" style="border: none">
-                            <h5 class="card-title text-center mt-2">Parcerias Comerciais</h5>
-                            <p class="card-text text-center">Afiliados, licenciados e desenvolvedores.</p>
+                            <h5 class="card-title text-center mt-2">Conta Digital</h5>
+                            <p class="card-text text-center">Abra sua conta digital.</p>
                         </div>
-                        <div class="card-footer" style="border: none">
+                        <div class="card-footer" style="border: none; background-color: transparent;">
                             <small class="text-muted">
                                 <a href="#" class="btn-grad">Ver mais <i class="bi bi-arrow-right"></i></a>
                             </small>
@@ -167,7 +167,7 @@
                             <h5 class="card-title text-center mt-2">APIs e Integrações</h5>
                             <p class="card-text text-center">Nossas APIs.</p>
                         </div>
-                        <div class="card-footer" style="border: none">
+                        <div class="card-footer" style="border: none; background-color: transparent;">
                             <small class="text-muted">
                                 <a href="#" class="btn-grad">Ver mais <i class="bi bi-arrow-right"></i></a>
                             </small>
@@ -183,7 +183,7 @@
                             <h5 class="card-title text-center mt-2">Marketplace</h5>
                             <p class="card-text text-center">Anuncie seus produtos e serviços em nosso marketplace (em breve).</p>
                         </div>
-                        <div class="card-footer" style="border: none">
+                        <div class="card-footer" style="border: none; background-color: transparent;">
                             <small class="text-muted">
                                 <a href="#" class="btn-grad">Ver mais <i class="bi bi-arrow-right"></i></a>
                             </small>

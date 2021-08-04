@@ -19,10 +19,6 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 
-Route::get('/cash-carteira', function() {
-    return view('cash-carteira');
-})->name('cash-carteira');
-
 Route::get('/quem_somos', function() {
     return view('quem_somos');
 })->name('quem_somos');
@@ -38,6 +34,10 @@ Route::get('/credito', function() {
 Route::get('/credenciamento', function() {
     return view('credenciamento');
 })->name('credenciamento');
+
+Route::get('/cash-carteira', 'App\Http\Controllers\CashCarteiraController@index')->name('cash-carteira');
+Route::post('/cash-carteira/cadastro', 'App\Http\Controllers\CashCarteiraController@cadastrarPessoaFisica')->name('cash.cadastro');
+
 
 Route::get('/seja_credenciado', 'App\Http\Controllers\CredenciamentoController@index')->name('seja_credenciado');
 

@@ -22,7 +22,7 @@
         </div>
     </div>
 
-    <div class="container p-5 mt-0">
+    <div class="container">
         @if(isset($success))
             <div class="alert alert-success" role="alert">
               {{ $success }}
@@ -34,41 +34,42 @@
               {{ $error }}
             </div>
         @endif
+
         <form action="{{ route('enviar.credenciamento_landing') }}" method="POST">
             <input type ="hidden" name="_token" value="{{{ csrf_token() }}}">
-            <div class="form-row">
-                <div class="mb-3">
+            <div class="row">
+                <div class="col-sm-6 mb-3">
                     <label for="nome_responsavel" class="form-label">Nome do Responsável</label>
                     <input type="text" class="form-control" id="nome_responsavel" name="nome_responsavel" placeholder="Digite o nome do responsável" required>
                 </div>
-                <div class="mb-3">
+                <div class="col-sm-6 mb-3">
                     <label for="cnpj" class="form-label">CNPJ</label>
                     <input type="text" class="form-control cnpj" id="cnpj" placeholder="Digite o CNPJ" name="cnpj" inputmode="numeric" required>
                     <div class="invalid-feedback" id="invalid-cnpj">
                         CNPJ Inválido
                     </div>
                 </div>
-                <div class="mb-3">
+                <div class="col-sm-2 mb-3">
                     <label for="ddd" class="form-label">DDD</label>
                     <input type="text" name="ddd" id="ddd" required maxlength="2"  min="0" max="9999" step="1" pattern="[0-9]{2}" placeholder="Digite o DDD" class="form-control">
                 </div>
-                <div class="mb-3">
+                <div class="col-sm-4 mb-3">
                     <label for="ddd" class="form-label">Telefone/Celular</label>
                     <input type="text" name="celular" id="celular" placeholder="Digite o número do Telefone/Celular" class="form-control phone" required>
                 </div>
-                <div class="form-group mb-3">
+                <div class="form-group mb-3 col-sm-6">
                     <label for="email">E-mail</label>
                     <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" required placeholder="Digite o seu e-mail">
                     <small id="emailHelp" class="form-text text-muted">Nós nunca iremos compartilhar o seu e-mail com alguém.</small>
                 </div>
-                <div class="form-check mb-3">
-                    <input type="checkbox" class="form-check-input" id="termos" required>
+                <div class="form-check mb-3 pl-5" style="font-size: 14px; margin-left: 10px;">
+                    <input type="checkbox" class="form-check-input" id="termos">
                     <label class="form-check-label" for="exampleCheck1">
                         Concordo com os Termos do Contrato que regem essa operação: Ao se cadastrar, você aceita os
                         <a href="#">
                             Termos e condições de uso e a Politica de Privacidade
                         </a>
-                        da OfertaCash.
+                         da OfertaCash.
                     </label>
                 </div>
             </div>
