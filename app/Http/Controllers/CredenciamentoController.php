@@ -23,7 +23,7 @@ class CredenciamentoController extends Controller
     }
 
     public function landing() {
-        $categorias = RamoAtividade::all();
+        $categorias = RamoAtividade::orderBy('RAMO_ATIVIDADE')->get();
 
         return view('credenciamento', compact('categorias'));
     }
@@ -54,6 +54,7 @@ class CredenciamentoController extends Controller
 
         $cred = new Credenciamento();
         $cred->NOME = $credenciamento['nome_responsavel'];
+        $cred->RAZAO_SOCIAL = $credenciamento['razao_social'];
         $cred->CNPJ = $credenciamento['cnpj'];
         $cred->DDD = $credenciamento['ddd'];
         $cred->CELULAR = $credenciamento['celular'];
