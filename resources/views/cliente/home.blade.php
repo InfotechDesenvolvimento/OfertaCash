@@ -21,12 +21,17 @@
     <div class="d-flex">
         <div class="container shadow-lg dashboard rounded m-3 flex-wrap">
             <div class="row" style="padding: 10px;">
-                <div class="col-6 simbolo rounded-circle" style="background-color: #02CA95;">
+                <div class="col-sm-6 simbolo rounded-circle" style="background-color: #02CA95;">
                     <i class="fas fa-dollar-sign fa-3x simbolo-fa"></i>
                 </div>
-                <div class="col-6" id="card01">
+                <div class="col-sm-6" id="card01">
                     <h3 class="subtitulo-dashboard">Saldo Disponível</h3>
-                    <h2 class="valor-dashboard" id="saldo-atual">$ {{ Auth::user()->SALDO_ATUAL }}</h2>
+                    <h2 class="valor-dashboard" id="saldo-atual">
+                        $ 
+                        <?php 
+                            echo number_format((float)Auth::user()->SALDO_ATUAL, 2, '.', ''); 
+                        ?>
+                    </h2>
                 </div>
             </div>
         </div>
@@ -38,7 +43,12 @@
                 </div>
                 <div class="col-6 card03">
                     <h3 class="subtitulo-dashboard">Saldo Payback</h3>
-                    <h2 class="valor-dashboard" id="saldo-payback">$ {{ Auth::user()->SALDO_VALE }}</h2>
+                    <h2 class="valor-dashboard" id="saldo-payback">
+                        $ 
+                        <?php 
+                            echo number_format((float)Auth::user()->SALDO_VALE, 2, '.', ''); 
+                        ?>
+                    </h2>
                 </div>
             </div>
         </div>

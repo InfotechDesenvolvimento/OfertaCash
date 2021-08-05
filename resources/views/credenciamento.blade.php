@@ -42,14 +42,21 @@
                     <label for="nome_responsavel" class="form-label">Nome do Responsável</label>
                     <input type="text" class="form-control" id="nome_responsavel" name="nome_responsavel" placeholder="Digite o nome do responsável" required>
                 </div>
-                <div class="col-sm-3 mb-3">
+                <div class="col-sm-6 mb-3">
+                    <label for="nome_responsavel" class="form-label">Nome da Empresa (Razão Social)</label>
+                    <input type="text" class="form-control" id="razao_social" name="razao_social" placeholder="Digite o nome da empresa (razão social)" required>
+                </div>
+                <div class="col-sm-4 mb-3">
                     <label for="cnpj" class="form-label">CNPJ</label>
                     <input type="text" class="form-control cnpj" id="cnpj" placeholder="Digite o CNPJ" name="cnpj" inputmode="numeric" required>
                     <div class="invalid-feedback" id="invalid-cnpj">
                         CNPJ Inválido
                     </div>
                 </div>
-                <div class="col-sm-3 mb-3">
+                <div class="col-sm-2 mb-3 align-self-end">
+                    <button type="button" class="btn btn-secondary" id="buscarCNPJ" style="width: 100%;">Pesquisar</button>
+                </div>
+                <div class="col-sm-4 mb-3">
                     <label for="categoria" class="form-label">Categoria</label>
                     <select class="form-control" id="categoria" name="categoria" required>
                         <option selected disabled>Escolha uma opção</option>
@@ -68,7 +75,7 @@
                     <label for="ddd" class="form-label">Telefone/Celular</label>
                     <input type="text" name="celular" id="celular" placeholder="Digite o número do Telefone/Celular" class="form-control phone" required>
                 </div>
-                <div class="form-group mb-3 col-sm-6">
+                <div class="form-group mb-3 col-sm-8">
                     <label for="email">E-mail</label>
                     <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" required placeholder="Digite o seu e-mail">
                     <small id="emailHelp" class="form-text text-muted">Nós nunca iremos compartilhar o seu e-mail com alguém.</small>
@@ -88,6 +95,9 @@
         </form>
     </div>
     @include('layouts.footer')
+
+    @include('layouts.scripts')
+
     <script>
         var pagina = document.getElementById("lojista");
         pagina.classList.add("active");
@@ -98,5 +108,8 @@
             $('.phone').mask('00000-0000');
         });
     </script>
+
     <script src="{{ asset('resources/js/estados-cidades.js') }}"></script>
+    <script src="{{ asset('resources/js/credenciamento.js') }}"></script>
+    
 @stop
