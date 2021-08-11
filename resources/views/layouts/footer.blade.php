@@ -1,9 +1,10 @@
 <footer>
     <div class="fundo">
         <h2 data-aos="fade-down">Oferta Cash -  Soluções Financeiras e Comerciais</h2>
-        <p id="information" data-aos="fade-up">Somos a primeira plataforma de cashback do país a integrar num só local:
-            <br>gestão de benefícios, gestão de recompensas próprias e de terceiros, banco digital,
-            <br>conta digital, soluções de crédito para empresas e seus clientes.</p>
+        <p id="information" data-aos="fade-up">Somos a primeira plataforma de cashback do país
+                                            <br>a integrar numa só ferramenta: gestão de de recompensas próprias
+                                            <br>e de parceiros, soluções de crédito para empresas e seus clientes,
+                                            <br>além de conta digital.</p>
     </div>
 </footer>
 

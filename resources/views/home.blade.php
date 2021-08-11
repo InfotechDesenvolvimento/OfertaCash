@@ -27,7 +27,7 @@
             <div class="col d-flex justify-content-center" data-aos="zoom-out-right">
                 <div class="card" style="width: 18rem; background-color: white; border: none">
                     <div class="card-body">
-                        <p class="text-center"><i class="fas fa-wallet fa-3x"></i></p>
+                        <p class="text-center"><i class="fas fa-wallet fa-3x faa-float animated"></i></p>
                         <h5 class="card-title text-center">Crie sua cash carteira</h5>
                         <p class="card-text text-center">Pessoa física</p>
                     </div>
@@ -36,7 +36,7 @@
             <div class="col d-flex justify-content-center" data-aos="zoom-out-up">
                 <div class="card" style="width: 18rem; background-color: white; border: none">
                     <div class="card-body">
-                        <p class="text-center"><i class="fas fa-briefcase fa-3x"></i></p>
+                        <p class="text-center"><i class="fas fa-briefcase fa-3x faa-float animated"></i></p>
                         <h5 class="card-title text-center">Seja credenciado</h5>
                         <p class="card-text text-center">Pessoa jurídica</p>
                     </div>
@@ -45,7 +45,7 @@
             <div class="col d-flex justify-content-center" data-aos="zoom-out-left">
                 <div class="card" style="width: 18rem; background-color: white; border: none">
                     <div class="card-body">
-                        <p class="text-center"><i class="fas fa-handshake fa-3x"></i></p>
+                        <p class="text-center"><i class="fas fa-handshake fa-3x faa-float animated"></i></p>
                         <h5 class="card-title text-center">Parcerias comerciais</h5>
                         <p class="card-text text-center">Seja nosso parceiro</p>
                     </div>
@@ -60,7 +60,7 @@
                     <div class="card-body">
                         <h5 class="card-title" id="titulo-sobre">Sobre nós</h5>
                         <br>
-                        <p class="card-text" id="texto-sobre">Somos a primeira plataforma de cashback do país a integrar num só local: gestão de benefícios, gestão de recompensas próprias e de terceiros, banco digital, conta digital, soluções de crédito para empresas e seus clientes.</p>
+                        <p class="card-text" id="texto-sobre">Somos a primeira plataforma de cashback do país a integrar numa só ferramenta: gestão de de recompensas próprias e de parceiros, soluções de crédito para empresas e seus clientes, além de conta digital.</p>
                         <br>
                         <h6 class="card-subtitle mb-2 text-muted">
                             <i class="fas fa-check-circle"></i>
@@ -149,7 +149,7 @@
                         </center>
                         <div class="card-body" style="border: none">
                             <h5 class="card-title text-center mt-2">Conta Digital</h5>
-                            <p class="card-text text-center">Abra sua conta digital.</p>
+                            <p class="card-text text-center">Abra sua conta digital (em breve).</p>
                         </div>
                         <div class="card-footer" style="border: none; background-color: transparent;">
                             <small class="text-muted">

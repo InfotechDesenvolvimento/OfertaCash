@@ -29,7 +29,7 @@
         </div>
     </div>
 
-    <div class="container mb-0" data-aos="fade-up-right">
+    <div class="container mb-0">
         <div class="row align-items-center">
             @include('simulador-emprestimo')
         </div>

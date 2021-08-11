@@ -81,3 +81,5 @@ Route::get('/lojista/estornos_recusados', 'App\Http\Controllers\LojistaControlle
 
 Route::get('logout', 'App\Http\Controllers\Auth\LoginController@logout')->name('logout');
 //Route::post('/login', 'App\Http\Controllers\Auth\LoginController@login')->name('login');
+
+Route::post('/contato/mensagem', 'App\Http\Controllers\ContatoController@enviarMensagem')->name('contato.mensagem');

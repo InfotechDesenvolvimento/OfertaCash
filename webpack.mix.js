@@ -14,4 +14,8 @@ const mix = require('laravel-mix');
 mix.js('resources/js/app.js', 'public/js')
     .postCss('resources/css/app.css', 'public/css', [
         //
-    ]);
+    ])
+    .copy(
+        'node_modules/font-awesome-animation',
+        'public/font-awesome-animation'
+    );;
