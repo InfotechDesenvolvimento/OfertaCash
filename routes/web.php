@@ -45,6 +45,7 @@ Route::post('enviar/credenciamento', 'App\Http\Controllers\CredenciamentoControl
 
 Route::post('enviar/credenciamento_landing', 'App\Http\Controllers\CredenciamentoController@enviarCredenciamentoLanding')
         ->name('enviar.credenciamento_landing');
+                
 
 Route::post('enviar/credenciamento_cliente', 'App\Http\Controllers\CredenciamentoController@enviarCredenciamentoCliente')
         ->name('enviar.credenciamento_cliente');
@@ -83,3 +84,7 @@ Route::get('logout', 'App\Http\Controllers\Auth\LoginController@logout')->name('
 //Route::post('/login', 'App\Http\Controllers\Auth\LoginController@login')->name('login');
 
 Route::post('/contato/mensagem', 'App\Http\Controllers\ContatoController@enviarMensagem')->name('contato.mensagem');
+
+
+Route::get('enviar/credenciamento_landing', 'App\Http\Controllers\CredenciamentoController@errorPage');
+Route::get('/contato/mensagem', 'App\Http\Controllers\CredenciamentoController@errorPage');

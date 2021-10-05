@@ -47,6 +47,10 @@ class CredenciamentoController extends Controller
         return json_encode($credenciadas);
     }
 
+    public function errorPage() {
+        return redirect()->route('home');
+    }
+
     public function enviarCredenciamentoLanding(Request $request) {
 
         $credenciamento = $request->all();
@@ -154,6 +158,7 @@ class CredenciamentoController extends Controller
         $cred->EMPREGADOR = $credenciamento['empresa'];
         $cred->COD_STATUS = 1;
         $cred->DATA_SOLICITACAO = date('Y-m-d');
+        
         if($credenciamento['promocional'] != null) {
             $cred->CODIGO_PROMOCIONAL = $credenciamento['promocional'];
         }

@@ -1,3 +1,5 @@
+var valor = 10000;
+
 function menos(){
 	var formato = { minimumFractionDigits: 2 , style: 'currency', currency: 'BRL' };
 
@@ -25,14 +27,14 @@ function mais(){
 	dinheiro = document.getElementById("simulacao-dinheiro").value;
 	dinheiro = parseInt(dinheiro);
 
-	if(dinheiro < 50000) {
+	if(dinheiro < valor) {
 		if(dinheiro < 1000) {
 			dinheiro = dinheiro + 100;
 		} else {
 			dinheiro = dinheiro + 1000;
 		}
 	} else {
-		dinheiro = 50000;
+		dinheiro = valor;
 	}
 
 	dinheiro = dinheiro.toLocaleString("en",{useGrouping: false,minimumFractionDigits: 2});

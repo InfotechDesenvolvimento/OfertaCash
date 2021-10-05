@@ -29,22 +29,37 @@ class ContatoController extends Controller
 
 			$data["title"] = "Nova mensagem!";
 	        $data["nome"] = $nome;
-	        $data["email-from"] = $email;
+	        $data["emailfrom"] = $email;
 	        $data["mensagem"] = $mensagem;
-	        $data["emailTo"] = "gabreezus@gmail.com";
+	        $data["emailTo"] = "contato@ofertacash.com.br";
+	        $data["data"] = date("d/m/Y");
+	        $data["hora"] = date("H:i:s");
 
-    		Mail::send('email.layout', $data, function($message)use($data, $pdf) {
-	            $message->to($data["emailTo"], $data["emailTo"])
-	            		->from('projetos.conciflex@gmail.com')
-	                    ->subject($data["title"]);
-	        });
+	        if($dados->NOME && $dados->EMAIL && $dados->MENSAGEM) {
+	    		Mail::send('email.layout', $data, function($message)use($data) {
+		            $message->to($data["emailTo"], $data["emailTo"])
+		            		->from('contato@ofertacash.com.br')
+		                    ->subject($data["title"]);
+		        });
+	    	}
+
+	    	try {
+	    		Mail::send('email.layout', $data, function($message)use($data) {
+		            $message->to($data["emailfrom"], $data["emailfrom"])
+		            		->from('contato@ofertacash.com.br')
+		                    ->subject("Copia: " .$data["title"]."");
+		        });
+	    	} catch (Exception $e) {
+	    		Log::info($e);
+	    	}
     	} catch (Exception $e) {
     		$dados->STATUS_ENVIADO = 0;
     		return view('contato')->with('message', $message);
     	}
 
-
-    	$dados->save();
+    	if($dados->NOME && $dados->EMAIL && $dados->MENSAGEM) {
+    		$dados->save();
+    	}
 
     	return view('contato')->with('message', $message);
     }

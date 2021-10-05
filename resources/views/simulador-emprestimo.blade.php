@@ -52,7 +52,7 @@
             <div class="col-sm-12 mt-3">
                 <div class="d-flex justify-content-center align-items-center">
 		            <p class="min-max" style="margin-right: 15px;">Min: R$ 100,00</p>
-                    <p class="min-max" style="margin-left: 15px;">Max: R$ 50.000,00</p>
+                    <p class="min-max" style="margin-left: 15px;">Max: R$ 10.000,00</p>
                 </div>
             </div>
             <div class="col-sm-12 mt-3">

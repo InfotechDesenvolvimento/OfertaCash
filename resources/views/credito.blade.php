@@ -133,6 +133,7 @@
             <button type="submit" class="btn btn-primary">Enviar</button>
         </form>
     </div>
+    
     @include('layouts.footer')
     <script>
         var pagina = document.getElementById("credito");

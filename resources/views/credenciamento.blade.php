@@ -59,7 +59,7 @@
                 <div class="col-sm-3 mb-3">
                     <label for="categoria" class="form-label">Categoria</label>
                     <select class="form-control" id="categoria" name="categoria" required>
-                        <option selected disabled>Escolha uma opção</option>
+                        <option selected disabled value="">Escolha uma opção</option>
                         @foreach($categorias as $categoria)
                             <option value="{{ $categoria->RAMO_ATIVIDADE }}">
                              {{ $categoria->RAMO_ATIVIDADE }} 
@@ -76,7 +76,7 @@
                     <input type="text" name="celular" id="celular" placeholder="Digite o número do Telefone" class="form-control phone" required>
                 </div>
                 <div class="form-group mb-3 col-sm-12">
-                    <label for="email">E-mail</label>
+                    <label for="email" class="form-label">E-mail</label>
                     <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" required placeholder="Digite o seu e-mail">
                     <small id="emailHelp" class="form-text text-muted">Nós nunca iremos compartilhar o seu e-mail com alguém.</small>
                 </div>
