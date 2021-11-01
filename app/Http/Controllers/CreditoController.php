@@ -10,17 +10,17 @@ use App\Models\Cidade;
 use App\Models\Estado;
 use App\Models\CredenciamentoCliente;
 
-class CashCarteiraController extends Controller
+class CreditoController extends Controller
 {
     public function index(){
         $estados_civis = EstadoCivil::all();
         $cidades = Cidade::all();
         $estados = Estado::all();
 
-        return view('cash-carteira', compact('cidades', 'estados_civis', 'estados'));
+        return view('credito', compact('cidades', 'estados_civis', 'estados'));
     }
 
-    public function cadastrarPessoaFisica(Request $request) {
+    public function cadastrarPessoaJuridica(Request $request) {
         $cadastro = $request->all();
 
         $credenciamento = new CredenciamentoCliente();
@@ -38,7 +38,6 @@ class CashCarteiraController extends Controller
         $credenciamento->CELULAR = $cadastro['celular'];
         $credenciamento->EMAIL = $cadastro['email'];
         $credenciamento->CODIGO_PROMOCIONAL = $cadastro['codigo'];
-        $credenciamento->COD_TIPO_PESSOA = 1;
 
         $estados_civis = EstadoCivil::all();
         $cidades = Cidade::all();

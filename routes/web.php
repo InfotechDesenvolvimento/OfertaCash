@@ -27,10 +27,8 @@ Route::get('/contato', function() {
     return view('contato');
 })->name('contato');
 
-Route::get('/credito', function() {
-    return view('credito');
-})->name('credito');
-
+Route::get('/credito', 'App\Http\Controllers\CreditoController@index')->name('credito');
+Route::post('/credito/cadastro', 'App\Http\Controllers\CreditoController@cadastrarPessoaJuridica')->name('credito.cadastro');
 
 Route::get('/credenciamento', 'App\Http\Controllers\CredenciamentoController@landing')->name('credenciamento');
 

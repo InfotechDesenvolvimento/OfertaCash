@@ -158,6 +158,7 @@ class CredenciamentoController extends Controller
         $cred->EMPREGADOR = $credenciamento['empresa'];
         $cred->COD_STATUS = 1;
         $cred->DATA_SOLICITACAO = date('Y-m-d');
+        $cred->COD_TIPO_PESSOA = 2;
         
         if($credenciamento['promocional'] != null) {
             $cred->CODIGO_PROMOCIONAL = $credenciamento['promocional'];

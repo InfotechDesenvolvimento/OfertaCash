@@ -194,3 +194,8 @@ input[type="text"], textarea #simulacao-dinheiro {
 .card-title {
     font-size: 30px;
 }
+
+#criar-conta {
+    text-decoration: none !important;
+    color: black;
+}
